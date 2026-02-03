@@ -360,6 +360,206 @@ footer {
     text-decoration: none;
 }
 
+/* Plans / Pricing Section */
+.plans {
+    padding: 6rem 2rem;
+    background: var(--bg-secondary);
+}
+
+.plans h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.plans-subtitle {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+}
+
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto 3rem;
+}
+
+.plan-card {
+    background: var(--bg-card);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.plan-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.plan-card-featured {
+    border-color: var(--accent-orange);
+    box-shadow: 0 0 20px rgba(224, 120, 80, 0.15);
+}
+
+.plan-card-premium {
+    border-color: var(--accent-blue);
+}
+
+.plan-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--accent-orange), var(--accent-coral));
+    color: white;
+    padding: 0.3rem 1.25rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.plan-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.plan-header h3 {
+    font-size: 1.5rem;
+    color: var(--accent-orange);
+    margin-bottom: 0.5rem;
+}
+
+.plan-card-premium .plan-header h3 {
+    color: var(--accent-blue);
+}
+
+.plan-price {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.plan-period {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-top: 0.25rem;
+}
+
+.plan-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.plan-features li {
+    color: var(--text-secondary);
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 0.95rem;
+}
+
+.plan-features li::before {
+    content: "\2713";
+    color: var(--accent-orange);
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+}
+
+.plan-card-premium .plan-features li::before {
+    color: var(--accent-blue);
+}
+
+.plan-features .plan-feature-note {
+    color: var(--text-secondary);
+    opacity: 0.7;
+    font-style: italic;
+}
+
+.plan-features .plan-feature-note::before {
+    content: "\2022";
+}
+
+/* Cascade Explainer */
+.cascade-explainer {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cascade-explainer h3 {
+    font-size: 1.5rem;
+    color: var(--accent-orange);
+    margin-bottom: 1rem;
+}
+
+.cascade-explainer > p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.cascade-table-wrapper {
+    overflow-x: auto;
+}
+
+.cascade-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-card);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.cascade-table th,
+.cascade-table td {
+    padding: 0.75rem 1.25rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cascade-table th {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.cascade-table td {
+    color: var(--text-secondary);
+}
+
+.cascade-table td:first-child {
+    text-align: left;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.cascade-table tr:last-child td {
+    border-bottom: none;
+}
+
+@media (max-width: 768px) {
+    .plans-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+
+    .plans h2 {
+        font-size: 2rem;
+    }
+}
+
 /* Category Grid (new structured layout) */
 .category-grid {
     display: grid;
@@ -492,4 +692,284 @@ section.faq > * {
     .faq h2, .customization h2 {
         font-size: 2rem;
     }
+}
+
+/* ===========================================
+   Legal Pages (Privacy Policy, Terms of Service)
+   =========================================== */
+
+.legal-page {
+    max-width: 900px;
+}
+
+.legal-page h2 {
+    font-size: 1.75rem;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.legal-page h3 {
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--accent-orange);
+}
+
+.legal-page section {
+    margin-bottom: 2rem;
+}
+
+/* Table of Contents */
+.toc {
+    background: var(--bg-card);
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+}
+
+.toc h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.toc ol {
+    columns: 2;
+    column-gap: 2rem;
+    padding-left: 1.25rem;
+    margin: 0;
+}
+
+.toc li {
+    margin-bottom: 0.5rem;
+    break-inside: avoid;
+}
+
+.toc a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.toc a:hover {
+    color: var(--accent-orange);
+}
+
+@media (max-width: 600px) {
+    .toc ol {
+        columns: 1;
+    }
+}
+
+/* Tables in Legal Pages */
+.legal-page table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0 1.5rem;
+    background: var(--bg-card);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.legal-page th,
+.legal-page td {
+    padding: 0.875rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.legal-page th {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.legal-page td {
+    color: var(--text-secondary);
+}
+
+.legal-page tr:last-child td {
+    border-bottom: none;
+}
+
+.legal-page .highlight-row {
+    background: rgba(224, 120, 80, 0.1);
+}
+
+.legal-page .highlight-row td {
+    color: var(--text-primary);
+}
+
+@media (max-width: 600px) {
+    .legal-page table {
+        font-size: 0.9rem;
+    }
+
+    .legal-page th,
+    .legal-page td {
+        padding: 0.625rem 0.75rem;
+    }
+}
+
+/* Highlight Box (main tier comparison) */
+.highlight-box {
+    background: linear-gradient(135deg, rgba(224, 120, 80, 0.15), rgba(255, 127, 110, 0.1));
+    border: 1px solid rgba(224, 120, 80, 0.3);
+    border-radius: 16px;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.highlight-box h2 {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+    color: var(--accent-orange);
+    font-size: 1.5rem;
+}
+
+.highlight-box .tier-table {
+    margin-bottom: 1rem;
+}
+
+.highlight-cta {
+    text-align: center;
+    color: var(--text-primary);
+    margin: 1rem 0 0;
+    font-size: 1.1rem;
+}
+
+/* Notice Box (informational callouts) */
+.notice-box {
+    background: var(--bg-card);
+    border-left: 4px solid var(--accent-blue);
+    border-radius: 0 12px 12px 0;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.notice-box h4 {
+    margin: 0 0 0.5rem;
+    color: var(--text-primary);
+}
+
+.notice-box p {
+    margin: 0.5rem 0;
+}
+
+.notice-box ul {
+    margin: 0.5rem 0 0;
+    padding-left: 1.25rem;
+}
+
+.notice-box.warning {
+    border-left-color: var(--accent-coral);
+    background: rgba(255, 127, 110, 0.1);
+}
+
+/* Summary Box (end of document) */
+.summary-box {
+    background: var(--bg-secondary);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+.summary-box h2 {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+    text-align: center;
+}
+
+.summary-box table {
+    margin-bottom: 1.5rem;
+}
+
+.summary-box .highlight-cta {
+    margin-bottom: 0;
+}
+
+/* Legal Page Lists */
+.legal-page ul,
+.legal-page ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.legal-page li {
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.legal-page li strong {
+    color: var(--text-primary);
+}
+
+/* ===========================================
+   About Page Styles
+   =========================================== */
+
+.about-tiers {
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: 16px;
+    margin: 1.5rem 0;
+}
+
+.about-tiers h3 {
+    color: var(--accent-orange);
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.about-tiers h3:first-child {
+    margin-top: 0;
+}
+
+.about-tiers p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.about-tiers ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-tiers li {
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    line-height: 1.7;
+}
+
+.about-tiers li strong {
+    color: var(--text-primary);
+}
+
+.about-cta {
+    background: linear-gradient(135deg, rgba(224, 120, 80, 0.15), rgba(255, 127, 110, 0.1));
+    border: 1px solid rgba(224, 120, 80, 0.3);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.about-cta p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.about-cta .notify-btn {
+    display: inline-block;
 }

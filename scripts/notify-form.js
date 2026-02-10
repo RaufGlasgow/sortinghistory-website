@@ -5,6 +5,7 @@ document.querySelectorAll('.notify-form').forEach(function(form) {
     var button = form.querySelector('button');
     var input = form.querySelector('input[type="email"]');
     var originalText = button.textContent;
+    var body = new FormData(form);
 
     button.textContent = 'Subscribing...';
     button.disabled = true;
@@ -13,7 +14,7 @@ document.querySelectorAll('.notify-form').forEach(function(form) {
     try {
       var response = await fetch('/api/subscribe', {
         method: 'POST',
-        body: new FormData(form),
+        body: body,
       });
 
       var data = await response.json();

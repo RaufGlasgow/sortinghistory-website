@@ -261,12 +261,14 @@ main {
 .notify-btn {
     display: inline-block;
     background: linear-gradient(135deg, var(--accent-orange), var(--accent-coral));
-    color: #ffffff;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff;
     padding: 1rem 2.5rem;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
     font-size: 1.1rem;
+    font-family: inherit;
     border: none;
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;

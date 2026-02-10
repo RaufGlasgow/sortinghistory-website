@@ -71,7 +71,7 @@ async function handleExport(request, env) {
   const key = url.searchParams.get('key');
 
   if (!key || key !== env.EXPORT_SECRET) {
-    return new Response('Unauthorized', { status: 401 });
+    return new Response(`Unauthorized (env set: ${env.EXPORT_SECRET !== undefined}, key length: ${key?.length}, env length: ${env.EXPORT_SECRET?.length})`, { status: 401 });
   }
 
   try {

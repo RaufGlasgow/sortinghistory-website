@@ -483,9 +483,11 @@
         <section class="notify">
             <h2>Get Notified at Launch</h2>
             <p>Be the first to know when Sorting History is available on the App Store.</p>
-            <a href="mailto:hello@sortinghistory.com?subject=Notify%20me%20about%20Sorting%20History&body=Please%20notify%20me%20when%20Sorting%20History%20launches%20on%20the%20App%20Store." class="notify-btn">
-                Get Launch Notification
-            </a>
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="notify-form">
+                <input type="email" name="email" placeholder="your@email.com" required class="notify-input">
+                <button type="submit" class="notify-btn">Notify Me</button>
+            </form>
+            <p class="notify-privacy">We'll only email you once — when we launch. No spam.</p>
         </section>
     </main>
 

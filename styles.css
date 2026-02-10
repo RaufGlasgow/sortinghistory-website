@@ -227,21 +227,61 @@ main {
     font-size: 1.1rem;
 }
 
+/* Notify Form */
+.notify-form {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 500px;
+    margin: 0 auto 1rem;
+}
+
+.notify-input {
+    flex: 1;
+    min-width: 200px;
+    padding: 1rem 1.5rem;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    background: var(--bg-card);
+    color: var(--text-primary);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.notify-input::placeholder {
+    color: var(--text-secondary);
+}
+
+.notify-input:focus {
+    border-color: var(--accent-orange);
+}
+
 .notify-btn {
     display: inline-block;
     background: linear-gradient(135deg, var(--accent-orange), var(--accent-coral));
-    color: white;
+    color: #ffffff;
     padding: 1rem 2.5rem;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
     font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .notify-btn:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 30px rgba(224, 120, 80, 0.4);
+}
+
+.notify-privacy {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    opacity: 0.8;
+    margin-top: 0.5rem;
 }
 
 /* Footer */
@@ -909,6 +949,69 @@ section.faq > * {
 
 .legal-page li strong {
     color: var(--text-primary);
+}
+
+/* ===========================================
+   Comparison Tables (Features Page)
+   =========================================== */
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-card);
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 1rem 1.25rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.comparison-table th {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.comparison-table th:first-child {
+    text-align: left;
+}
+
+.comparison-table td {
+    color: var(--text-secondary);
+}
+
+.comparison-table td:first-child {
+    text-align: left;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.comparison-table tr:last-child td {
+    border-bottom: none;
+}
+
+.comparison-table tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/* Responsive table wrapper */
+.table-wrapper {
+    overflow-x: auto;
+    margin: 1.5rem 0;
+}
+
+@media (max-width: 600px) {
+    .comparison-table th,
+    .comparison-table td {
+        padding: 0.75rem 0.875rem;
+        font-size: 0.9rem;
+    }
 }
 
 /* ===========================================

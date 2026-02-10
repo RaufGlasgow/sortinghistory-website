@@ -3,3 +3,8 @@ compatibility_date = "2025-01-05"
 
 [assets]
 directory = "./"
+
+[[kv_namespaces]]
+binding = "LAUNCH_EMAILS"
+id = "464b863194814d789d91c8c391df2026"
+preview_id = "09b3ee28cc57443e8adac49d5311f715"

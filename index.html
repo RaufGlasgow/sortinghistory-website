@@ -483,13 +483,14 @@
         <section class="notify">
             <h2>Get Notified at Launch</h2>
             <p>Be the first to know when Sorting History is available on the App Store.</p>
-            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="notify-form">
+            <form action="/api/subscribe" method="POST" class="notify-form">
                 <input type="email" name="email" placeholder="your@email.com" required class="notify-input">
                 <button type="submit" class="notify-btn">Notify Me</button>
             </form>
             <p class="notify-privacy">We'll only email you once — when we launch. No spam.</p>
         </section>
     </main>
+    <script src="/scripts/notify-form.js" defer></script>
 
     <footer>
         <div class="footer-content">

@@ -1,8 +1,10 @@
 name = "sortinghistory-website"
 compatibility_date = "2025-01-05"
+main = "src/worker.js"
 
 [assets]
 directory = "./"
+binding = "ASSETS"
 
 [[kv_namespaces]]
 binding = "LAUNCH_EMAILS"

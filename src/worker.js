@@ -8,6 +8,11 @@ export default {
       return new Response('Method not allowed', { status: 405 });
     }
 
+    if (url.pathname === '/api/unsubscribe') {
+      if (request.method === 'GET') return handleUnsubscribe(request, env);
+      return new Response('Method not allowed', { status: 405 });
+    }
+
     if (url.pathname === '/api/export-emails') {
       if (request.method === 'GET') return handleExport(request, env);
       return new Response('Method not allowed', { status: 405 });
@@ -64,6 +69,52 @@ async function handleSubscribe(request, env) {
       error: 'Something went wrong. Please try again.',
     }), { status: 500, headers });
   }
+}
+
+async function handleUnsubscribe(request, env) {
+  const url = new URL(request.url);
+  const email = url.searchParams.get('email')?.toLowerCase().trim();
+
+  if (!email) {
+    return new Response(unsubscribePage('Missing email address.', false), {
+      status: 400,
+      headers: { 'Content-Type': 'text/html' },
+    });
+  }
+
+  try {
+    await env.LAUNCH_EMAILS.delete(email);
+    return new Response(unsubscribePage('You have been unsubscribed. You will no longer receive emails from us.', true), {
+      status: 200,
+      headers: { 'Content-Type': 'text/html' },
+    });
+  } catch (error) {
+    return new Response(unsubscribePage('Something went wrong. Please try again later.', false), {
+      status: 500,
+      headers: { 'Content-Type': 'text/html' },
+    });
+  }
+}
+
+function unsubscribePage(message, success) {
+  return `<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unsubscribe — Sorting History</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+  .card { background: #16213e; border-radius: 12px; padding: 2rem; max-width: 400px; text-align: center; }
+  .card h1 { font-size: 1.3rem; margin-bottom: 1rem; color: ${success ? '#4CAF50' : '#f44336'}; }
+  .card p { line-height: 1.6; }
+  .card a { color: #e07850; text-decoration: none; }
+</style>
+</head><body>
+<div class="card">
+  <h1>${success ? 'Unsubscribed' : 'Error'}</h1>
+  <p>${message}</p>
+  <p><a href="/">Back to Sorting History</a></p>
+</div>
+</body></html>`;
 }
 
 async function handleExport(request, env) {

@@ -1,10 +1,10 @@
 export default {
-  async fetch(request, env) {
+  async fetch(request, env, ctx) {
     const url = new URL(request.url);
 
     if (url.pathname === '/api/subscribe') {
       if (request.method === 'OPTIONS') return handleCORS();
-      if (request.method === 'POST') return handleSubscribe(request, env);
+      if (request.method === 'POST') return handleSubscribe(request, env, ctx);
       return new Response('Method not allowed', { status: 405 });
     }
 
@@ -32,7 +32,7 @@ function handleCORS() {
   });
 }
 
-async function handleSubscribe(request, env) {
+async function handleSubscribe(request, env, ctx) {
   const headers = {
     'Content-Type': 'application/json',
     'Access-Control-Allow-Origin': '*',
@@ -57,6 +57,8 @@ async function handleSubscribe(request, env) {
     };
 
     await env.LAUNCH_EMAILS.put(email, JSON.stringify(metadata));
+
+    ctx.waitUntil(sendWelcomeEmail(email, env));
 
     return new Response(JSON.stringify({
       success: true,
@@ -170,4 +172,40 @@ function escapeCSV(value) {
     return '"' + str.replace(/"/g, '""') + '"';
   }
   return str;
+}
+
+async function sendWelcomeEmail(email, env) {
+  const unsubscribeUrl = `https://sortinghistory.com/api/unsubscribe?email=${encodeURIComponent(email)}`;
+
+  const html = `<!DOCTYPE html>
+<html><head><meta charset="UTF-8"></head>
+<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #1a1a2e; color: #e0e0e0; margin: 0; padding: 2rem;">
+  <div style="max-width: 500px; margin: 0 auto; background: #16213e; border-radius: 12px; padding: 2rem;">
+    <h1 style="color: #e07850; font-size: 1.4rem; margin-top: 0;">You're on the list!</h1>
+    <p style="line-height: 1.6;">Thanks for signing up for Sorting History updates.</p>
+    <p style="line-height: 1.6;">We're building a history trivia game where you sort events in chronological order &mdash; with categories ranging from Ancient Civilizations to Space History, and more on the way.</p>
+    <p style="line-height: 1.6;">I developed this game for my wife and family, and I hope you'll enjoy it as much as we do.</p>
+    <p style="line-height: 1.6;">We'll email you when we release and when new trivia categories drop.</p>
+    <hr style="border: none; border-top: 1px solid #2a3a5e; margin: 1.5rem 0;">
+    <p style="font-size: 0.85rem; color: #888;"><a href="${unsubscribeUrl}" style="color: #888;">Unsubscribe</a></p>
+  </div>
+</body></html>`;
+
+  try {
+    await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${env.RESEND_API_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        from: 'Sorting History <hello@sortinghistory.com>',
+        to: [email],
+        subject: "You're on the list!",
+        html,
+      }),
+    });
+  } catch (e) {
+    // Fire-and-forget — don't fail the subscription if email fails
+  }
 }

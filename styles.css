@@ -68,6 +68,35 @@ nav {
     color: var(--text-primary);
 }
 
+/* Language Picker */
+.lang-picker {
+    display: flex;
+    gap: 0.4rem;
+    margin-left: 1rem;
+    padding-left: 1rem;
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.lang-picker a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.8rem;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    transition: color 0.2s, background 0.2s;
+    letter-spacing: 0.5px;
+}
+
+.lang-picker a:hover {
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.lang-picker a.lang-active {
+    color: var(--accent-orange);
+    font-weight: 600;
+}
+
 /* Hero Section */
 main {
     padding-top: 80px;
@@ -470,6 +499,17 @@ footer {
 
     .nav-links {
         gap: 1rem;
+    }
+
+    .lang-picker {
+        margin-left: 0.5rem;
+        padding-left: 0.5rem;
+        gap: 0.2rem;
+    }
+
+    .lang-picker a {
+        font-size: 0.7rem;
+        padding: 0.15rem 0.3rem;
     }
 
     .feature-grid {

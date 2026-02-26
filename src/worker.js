@@ -1,3 +1,5 @@
+const SUPPORTED_LANGS = ['de', 'pt', 'nl', 'es'];
+
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
@@ -18,7 +20,20 @@ export default {
       return new Response('Method not allowed', { status: 405 });
     }
 
-    return env.ASSETS.fetch(request);
+    // Language auto-redirect on root path only
+    if (url.pathname === '/' || url.pathname === '/index.html') {
+      const redirect = handleLanguageRedirect(request, url);
+      if (redirect) return redirect;
+    }
+
+    // Serve static assets, set lang_pref cookie for English root visitors
+    const response = await env.ASSETS.fetch(request);
+    if ((url.pathname === '/' || url.pathname === '/index.html') && !getCookie(request, 'lang_pref')) {
+      const newResponse = new Response(response.body, response);
+      newResponse.headers.append('Set-Cookie', 'lang_pref=en; path=/; max-age=31536000; SameSite=Lax');
+      return newResponse;
+    }
+    return response;
   },
 };
 
@@ -173,6 +188,65 @@ function escapeCSV(value) {
   }
   return str;
 }
+
+// --- Language redirect helpers ---
+
+function getCookie(request, name) {
+  const cookies = request.headers.get('Cookie') || '';
+  const match = cookies.match(new RegExp(`${name}=(\\w+)`));
+  return match ? match[1] : null;
+}
+
+function handleLanguageRedirect(request, url) {
+  const langPref = getCookie(request, 'lang_pref');
+
+  if (langPref) {
+    if (SUPPORTED_LANGS.includes(langPref)) {
+      return Response.redirect(`${url.origin}/${langPref}/`, 302);
+    }
+    // lang_pref=en or unknown — serve English (no redirect)
+    return null;
+  }
+
+  // Detect from Accept-Language header
+  const acceptLang = request.headers.get('Accept-Language') || '';
+  const detected = detectLanguage(acceptLang);
+
+  if (detected) {
+    return new Response(null, {
+      status: 302,
+      headers: {
+        'Location': `${url.origin}/${detected}/`,
+        'Set-Cookie': `lang_pref=${detected}; path=/; max-age=31536000; SameSite=Lax`,
+      },
+    });
+  }
+
+  // English or unrecognized — cookie set by caller
+  return null;
+}
+
+function detectLanguage(acceptLang) {
+  const langs = acceptLang
+    .split(',')
+    .map((entry) => {
+      const [lang, qStr] = entry.trim().split(';q=');
+      return {
+        lang: lang.split('-')[0].toLowerCase(),
+        q: qStr ? parseFloat(qStr) : 1,
+      };
+    })
+    .sort((a, b) => b.q - a.q);
+
+  for (const { lang } of langs) {
+    if (SUPPORTED_LANGS.includes(lang)) {
+      return lang;
+    }
+  }
+  return null;
+}
+
+// --- Email helpers ---
 
 async function sendWelcomeEmail(email, env) {
   const unsubscribeUrl = `https://sortinghistory.com/api/unsubscribe?email=${encodeURIComponent(email)}`;

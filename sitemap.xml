@@ -37,9 +37,27 @@
         <priority>0.9</priority>
     </url>
     <url>
+        <loc>https://sortinghistory.com/compare/</loc>
+        <lastmod>2026-02-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://sortinghistory.com/compare/timeline-board-game.html</loc>
-        <lastmod>2026-02-08</lastmod>
+        <lastmod>2026-02-26</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://sortinghistory.com/compare/trivia-crack.html</loc>
+        <lastmod>2026-02-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://sortinghistory.com/compare/best-history-trivia-apps.html</loc>
+        <lastmod>2026-02-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
     </url>
 </urlset>

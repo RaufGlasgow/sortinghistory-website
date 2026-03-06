@@ -480,6 +480,18 @@ footer {
     font-size: 0.9rem;
 }
 
+/* Mobile hamburger menu */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.25rem;
+    line-height: 1;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .hero {
@@ -497,23 +509,60 @@ footer {
         max-width: 250px;
     }
 
+    .nav-toggle {
+        display: block;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+    .nav-links,
+    .lang-picker {
+        display: none;
+        width: 100%;
+    }
+
+    .nav-links.nav-open,
+    .lang-picker.nav-open {
+        display: flex;
+    }
+
     .nav-links {
-        gap: 1rem;
+        flex-direction: column;
+        gap: 0;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        margin-top: 1rem;
+    }
+
+    .nav-links a {
+        padding: 0.75rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
 
     .lang-picker {
-        margin-left: 0.5rem;
-        padding-left: 0.5rem;
-        gap: 0.2rem;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0.75rem 0;
+        margin-left: 0;
+        padding-left: 0;
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
     }
 
     .lang-picker a {
-        font-size: 0.7rem;
-        padding: 0.15rem 0.3rem;
+        font-size: 0.85rem;
+        padding: 0.3rem 0.5rem;
     }
 
     .feature-grid {
         grid-template-columns: 1fr;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        gap: 1rem;
     }
 }
 
@@ -813,6 +862,24 @@ footer {
     content: "•";
     color: var(--accent-coral);
     margin-right: 0.5rem;
+}
+
+/* Family Game Night Section */
+.family-night {
+    padding: 6rem 2rem;
+}
+
+.family-night h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.features-subtitle {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
 }
 
 /* Customization Section */

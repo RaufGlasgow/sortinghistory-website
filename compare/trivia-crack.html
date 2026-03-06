@@ -75,9 +75,12 @@
     <header>
         <nav>
             <a href="/" class="logo">Sorting History</a>
+            <button class="nav-toggle" aria-label="Menu" aria-expanded="false">&#9776;</button>
             <div class="nav-links">
                 <a href="/about.html">About</a>
                 <a href="/features.html">Features</a>
+                <a href="/family.html">Families</a>
+                <a href="/compare/">Compare</a>
                 <a href="/support.html">Support</a>
                 <a href="/privacy.html">Privacy</a>
                 <a href="/terms.html">Terms</a>
@@ -148,12 +151,12 @@
                     </tr>
                     <tr>
                         <td>Languages</td>
-                        <td>25 languages</td>
+                        <td>20+ languages</td>
                         <td>4 languages (English, German, Portuguese, Dutch)</td>
                     </tr>
                     <tr>
                         <td>Difficulty levels</td>
-                        <td>One difficulty</td>
+                        <td>No difficulty settings (multiple game modes)</td>
                         <td>Friendly / Competitive / Expert</td>
                     </tr>
                     <tr>
@@ -163,12 +166,12 @@
                     </tr>
                     <tr>
                         <td>New content</td>
-                        <td>Community-created questions (quality varies)</td>
-                        <td>Researched events added monthly via community vote</td>
+                        <td>Community and AI-created questions</td>
+                        <td>New researched events planned monthly via community vote</td>
                     </tr>
                     <tr>
                         <td>Price</td>
-                        <td>Free with heavy in-app purchases</td>
+                        <td>Free with ads, subscriptions from $4.99/mo</td>
                         <td>Free tier (8 categories). Explorer $1.99/mo. Historian $2.99/mo.</td>
                     </tr>
                 </tbody>
@@ -221,7 +224,7 @@
                 <li><strong>Topic variety.</strong> If you want science, sports, entertainment, geography, and art alongside history, Trivia Crack covers it all.</li>
                 <li><strong>Online matchmaking.</strong> Play against random opponents worldwide. Sorting History multiplayer is local (WiFi and Pass & Play).</li>
                 <li><strong>Massive community.</strong> Hundreds of millions of players. User-created content. Social features.</li>
-                <li><strong>More languages.</strong> Trivia Crack supports 25 languages. Sorting History currently supports 4.</li>
+                <li><strong>More languages.</strong> Trivia Crack supports 20+ languages. Sorting History currently supports 4.</li>
             </ul>
         </section>
 
@@ -258,7 +261,7 @@
 
         <section id="cta" class="notify">
             <h2>Try Sorting History Free</h2>
-            <p>8 free categories, 800+ history events, no timer, works offline. Launching late March 2026.</p>
+            <p>8 free categories, 800+ history events, no timer, works offline. Launching April 2026.</p>
             <form action="/api/subscribe" method="POST" class="notify-form">
                 <input type="email" name="email" placeholder="your@email.com" required class="notify-input">
                 <button type="submit" class="notify-btn">Notify Me</button>
@@ -275,10 +278,11 @@
                 <a href="/privacy.html">Privacy Policy</a>
                 <a href="/terms.html">Terms of Service</a>
                 <a href="/support.html">Support</a>
-                <a href="mailto:hello@sortinghistory.com">Contact</a>
+                <a href="mailto:hello@emptycupmedia.com">Contact</a>
             </div>
             <p class="copyright">&copy; 2026 Sorting History. All rights reserved.</p>
         </div>
     </footer>
+    <script src="/scripts/nav-toggle.js" defer></script>
 </body>
 </html>

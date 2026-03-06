@@ -31,9 +31,11 @@
     <header>
         <nav>
             <a href="/" class="logo">Sorting History</a>
+            <button class="nav-toggle" aria-label="Menu" aria-expanded="false">&#9776;</button>
             <div class="nav-links">
                 <a href="/about.html">About</a>
                 <a href="/features.html">Features</a>
+                <a href="/family.html">Families</a>
                 <a href="/compare/">Compare</a>
                 <a href="/support.html">Support</a>
                 <a href="/privacy.html">Privacy</a>
@@ -73,7 +75,7 @@
 
         <section id="cta" class="notify">
             <h2>Try Sorting History Free</h2>
-            <p>8 free categories, 800+ history events, no timer, works offline. Launching late March 2026.</p>
+            <p>8 free categories, 800+ history events, no timer, works offline. Launching April 2026.</p>
             <form action="/api/subscribe" method="POST" class="notify-form">
                 <input type="email" name="email" placeholder="your@email.com" required class="notify-input">
                 <button type="submit" class="notify-btn">Notify Me</button>
@@ -90,10 +92,11 @@
                 <a href="/privacy.html">Privacy Policy</a>
                 <a href="/terms.html">Terms of Service</a>
                 <a href="/support.html">Support</a>
-                <a href="mailto:hello@sortinghistory.com">Contact</a>
+                <a href="mailto:hello@emptycupmedia.com">Contact</a>
             </div>
             <p class="copyright">&copy; 2026 Sorting History. All rights reserved.</p>
         </div>
     </footer>
+    <script src="/scripts/nav-toggle.js" defer></script>
 </body>
 </html>

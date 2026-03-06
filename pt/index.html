@@ -3,29 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sorting History - O Melhor Jogo de Trivia de História para iOS</title>
-    <meta name="description" content="Ordena eventos históricos por ordem cronológica. Joga sozinho ou com família e amigos no iPhone e iPad. Começa grátis, novas categorias a cada duas semanas.">
-    <meta name="robots" content="index, follow">
+    <title>Sorting History - O Melhor Jogo de Trivia de História para iOS | Joga Sozinho ou com Amigos</title>
+    <meta name="description" content="Ordena eventos históricos por ordem cronológica em 12 categorias. Desafio Diário, aventuras a solo e multijogador no iPhone e iPad. Começa grátis — conteúdo novo todos os meses.">
+    <meta name="keywords" content="jogo de trivia de história, app trivia iOS, jogo de história iPhone, jogo de cronologia, jogo educativo, jogo de trivia em família, trivia multijogador, jogo de história por subscrição">
+
+    <!-- AI Search Optimization -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Sorting History - O Melhor Jogo de Trivia de História para iOS">
+    <meta property="og:description" content="Ordena eventos históricos por ordem cronológica em 12 categorias. Desafio Diário, aventuras a solo e multijogador no iPhone e iPad. Começa grátis — conteúdo novo todos os meses.">
+    <meta property="og:image" content="https://sortinghistory.com/images/og-image.png">
+    <meta property="og:url" content="https://sortinghistory.com/pt/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Sorting History">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sorting History - O Melhor Jogo de Trivia de História para iOS">
+    <meta name="twitter:description" content="Desafio Diário, 12 categorias, solo e multijogador. Ordena eventos históricos por ordem cronológica no iPhone e iPad. Começa grátis.">
+    <meta name="twitter:image" content="https://sortinghistory.com/images/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link rel="apple-touch-icon" href="/images/app-icon.png">
+
+    <!-- Canonical URL -->
     <link rel="canonical" href="https://sortinghistory.com/pt/">
+
+    <!-- Language Alternates -->
     <link rel="alternate" hreflang="en" href="https://sortinghistory.com/">
     <link rel="alternate" hreflang="de" href="https://sortinghistory.com/de/">
     <link rel="alternate" hreflang="pt" href="https://sortinghistory.com/pt/">
     <link rel="alternate" hreflang="nl" href="https://sortinghistory.com/nl/">
     <link rel="alternate" hreflang="es" href="https://sortinghistory.com/es/">
     <link rel="alternate" hreflang="x-default" href="https://sortinghistory.com/">
-    <link rel="icon" type="image/png" href="/images/favicon.png">
-    <link rel="apple-touch-icon" href="/images/app-icon.png">
+
+    <!-- Structured Data: Mobile Application -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MobileApplication",
+        "name": "Sorting History",
+        "operatingSystem": "iOS 15.0 ou posterior",
+        "applicationCategory": "GameApplication",
+        "applicationSubCategory": "Trivia",
+        "description": "Ordena eventos históricos por ordem cronológica em 12 categorias no iPhone e iPad. Desafio Diário todos os dias, aventuras a solo, passa-e-joga com a família, ou liga vários dispositivos por WiFi. Mais de 1.200 eventos no lançamento. Começa grátis com 8 categorias. Duas novas categorias adicionadas todos os meses.",
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Grátis",
+                "price": "0",
+                "priceCurrency": "USD",
+                "description": "8 categorias com anúncios. Desbloqueia qualquer categoria durante 1 hora ao ver um anúncio.",
+                "availability": "https://schema.org/PreOrder"
+            },
+            {
+                "@type": "Offer",
+                "name": "Explorer",
+                "description": "Todas as categorias, sem anúncios. Disponível mensal, anual ou como compra vitalícia.",
+                "availability": "https://schema.org/PreOrder"
+            },
+            {
+                "@type": "Offer",
+                "name": "Historian",
+                "description": "Todas as categorias sem anúncios, mais pacotes de expansão, modo de jogo History Pinpoint e votação em expansões. Disponível mensal, anual ou como compra vitalícia.",
+                "availability": "https://schema.org/PreOrder"
+            }
+        ],
+        "author": {
+            "@type": "Person",
+            "name": "Ra'uf Glasgow"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Sorting History"
+        },
+        "genre": ["Trivia", "Educativo", "História", "Família"],
+        "gamePlatform": ["iOS", "iPhone", "iPad"],
+        "contentRating": "Para todos",
+        "inLanguage": "pt",
+        "isAccessibleForFree": true,
+        "datePublished": "2026-02-26",
+        "screenshot": [
+            {
+                "@type": "ImageObject",
+                "url": "https://sortinghistory.com/images/screenshots/home-menu-clean.png",
+                "caption": "Menu principal do Sorting History com opções Aventura Solo, Passa e Joga e Jogo em Rede"
+            },
+            {
+                "@type": "ImageObject",
+                "url": "https://sortinghistory.com/images/screenshots/game-setup.png",
+                "caption": "Ecrã de configuração do jogo com modo de jogo, modo de jogador e opções de pontuação"
+            },
+            {
+                "@type": "ImageObject",
+                "url": "https://sortinghistory.com/images/screenshots/categories.png",
+                "caption": "Grelha de seleção de categorias mostrando categorias de história"
+            },
+            {
+                "@type": "ImageObject",
+                "url": "https://sortinghistory.com/images/screenshots/gameplay.png",
+                "caption": "Jogabilidade da cronologia com eventos históricos a serem ordenados cronologicamente"
+            },
+            {
+                "@type": "ImageObject",
+                "url": "https://sortinghistory.com/images/screenshots/results.png",
+                "caption": "Ecrã de resultados mostrando a pontuação detalhada e a precisão"
+            }
+        ],
+        "featureList": [
+            "Desafio Diário — um novo puzzle de 4 eventos todos os dias",
+            "12 categorias de história no lançamento",
+            "Duas novas categorias todos os meses",
+            "Nível gratuito com 8 categorias",
+            "Níveis Explorer e Historian",
+            "Compra mensal, anual ou vitalícia",
+            "Modos Solo, Passa e Joga e Jogo em Rede",
+            "Duração de jogo personalizável (5-30 rondas)",
+            "Três modos de pontuação (Amigável, Competitivo, Especialista)",
+            "Mais de 1.200 eventos históricos pesquisados",
+            "Votação comunitária em novas categorias",
+            "Sem anúncios em todos os níveis pagos"
+        ]
+    }
+    </script>
+
+    <!-- Structured Data: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "O que é o Sorting History?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Um jogo de trivia de história para iPhone e iPad onde colocas eventos históricos numa cronologia pela ordem correta. Em vez de escolheres A, B, C ou D, arrastas os eventos para a posição cronológica — quanto mais perto acertares, mais pontos ganhas. 12 categorias no lançamento com duas novas adicionadas todos os meses."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Posso jogar sozinho ou com outras pessoas?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ambos. O modo Aventura Solo acompanha o teu ranking de F a S+ em todas as categorias. Passa e Joga permite que joguem à vez num só dispositivo para noites de jogos em família. O Jogo em Rede liga vários dispositivos por WiFi local para competições em equipa — ótimo para salas de aula e festas."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "O Sorting History é grátis?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sim. Descarrega gratuitamente e joga 8 categorias com anúncios. Também podes desbloquear qualquer categoria durante 1 hora ao ver um único anúncio. Explorer e Historian removem todos os anúncios e desbloqueiam todas as categorias permanentemente. Paga mensal, anual ou uma única vez para acesso vitalício."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Como funciona o conteúdo novo?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Duas novas categorias são lançadas todos os meses — uma a cada duas semanas. Uma escolhida por votação da comunidade, outra pela equipa do Sorting History. Todos os níveis recebem acesso no dia de lançamento. Subscritores jogam sem anúncios e jogadores gratuitos podem desbloquear qualquer nova categoria durante 1 hora ao ver um anúncio. Vota na categoria do próximo mês dentro da app após cada jogo."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Este jogo é bom para famílias com crianças?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutamente. O modo de pontuação Amigável remove penalizações por respostas erradas, tornando-o perfeito para jogadores mais jovens. Cada evento inclui uma breve explicação após o colocares, para que as crianças aprendam a história por trás de cada resposta. Sem violência, sem conteúdo para adultos — concebido para ser educativo e divertido para todas as idades."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "O Jogo em Rede requer uma subscrição?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Não. O Jogo em Rede por WiFi local é gratuito para todos. Liga dois ou mais dispositivos na mesma rede WiFi e joga em conjunto, independentemente do nível."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "O que é o Desafio Diário?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Todos os dias, o Sorting History dá-te um novo desafio — 4 eventos numa categoria surpresa. Ordena-os por ordem cronológica em menos de 5 minutos. É o mesmo desafio para todos, por isso podes comparar com amigos!"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "O jogo repete os mesmos eventos?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "O Sorting History utiliza reciclagem inteligente de conteúdo. Os eventos que erraste voltam com mais frequência para te ajudar a aprender. Os eventos que já dominaste aparecem menos vezes. Quanto mais jogas, mais inteligente o jogo se torna a desafiar-te."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quantos eventos existem?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Mais de 1.200 eventos no lançamento em 12 categorias, com novos eventos adicionados todos os meses. As tuas categorias continuam a crescer."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Structured Data: WebSite -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Sorting History",
+        "url": "https://sortinghistory.com/pt/",
+        "description": "Website oficial do Sorting History, o melhor jogo de trivia de história para iOS",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Sorting History",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://sortinghistory.com/images/app-icon.png"
+            }
+        }
+    }
+    </script>
+
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
     <header>
         <nav>
             <a href="/pt/" class="logo">Sorting History</a>
+            <button class="nav-toggle" aria-label="Menu" aria-expanded="false">&#9776;</button>
             <div class="nav-links">
-                <a href="/about.html">Sobre</a>
-                <a href="/features.html">Funcionalidades</a>
-                <a href="#plans">Planos</a>
-                <a href="/support.html">Suporte</a>
+                <a href="/pt/about.html">Sobre</a>
+                <a href="/pt/features.html">Funcionalidades</a>
+                <a href="/pt/family.html">Famílias</a>
+                <a href="/compare/">Comparar</a>
+                <a href="#planos">Planos</a>
+                <a href="/pt/support.html">Suporte</a>
             </div>
             <div class="lang-picker">
                 <a href="/">EN</a>
@@ -41,23 +259,286 @@
         <section class="hero">
             <div class="hero-content">
                 <div class="app-icon">
-                    <img src="/images/app-icon.png" alt="Sorting History App Icon" width="120" height="120">
+                    <img src="/images/app-icon.png" alt="Ícone da App Sorting History - Jogo de Trivia de História para iOS" width="120" height="120">
                 </div>
                 <h1>Sorting History</h1>
                 <p class="tagline">O Melhor Jogo de Trivia de História para iOS</p>
+
                 <div class="coming-soon-badge">
-                    <span>Disponível em abril de 2026</span>
+                    <span>Disponível em Abril de 2026</span>
                 </div>
+
                 <p class="description">
-                    Versão em português em preparação. A página completa estará disponível em breve.
-                </p>
-                <p class="description">
-                    <a href="/" style="color: var(--accent-orange);">Ver versão em inglês →</a>
+                    Ordena eventos históricos por ordem cronológica em 12 categorias que abrangem 5.000 anos de história da humanidade.
+                    Joga sozinho, com a família num só dispositivo, ou liga-te por WiFi. Começa grátis — duas novas categorias todos os meses.
                 </p>
             </div>
+
             <div class="hero-image">
-                <img src="/images/screenshots/home-menu-clean.png" alt="Menu principal do Sorting History" class="phone-mockup">
+                <img src="/images/screenshots/home-menu-clean.png" alt="Captura de ecrã do Sorting History mostrando o menu principal com opções Aventura Solo, Passa e Joga e Jogo em Rede" class="phone-mockup">
             </div>
+        </section>
+
+        <section class="showcase">
+            <h2>Vê em Ação</h2>
+            <p class="showcase-subtitle">Configura o teu jogo, escolhe as tuas categorias, ordena eventos na cronologia e vê como te saíste.</p>
+            <div class="showcase-scroll">
+                <div class="showcase-grid">
+                    <div class="showcase-item">
+                        <img src="/images/screenshots/game-setup.png" alt="Ecrã de configuração do jogo mostrando modo de jogo, modo de jogador e opções de pontuação" class="showcase-phone" width="270" height="585" loading="lazy">
+                        <p class="showcase-caption">Personaliza o Teu Jogo</p>
+                    </div>
+                    <div class="showcase-item">
+                        <img src="/images/screenshots/categories.png" alt="Grelha de seleção de categorias mostrando categorias de história com ícones" class="showcase-phone" width="270" height="585" loading="lazy">
+                        <p class="showcase-caption">Escolhe as Tuas Categorias</p>
+                    </div>
+                    <div class="showcase-item">
+                        <img src="/images/screenshots/gameplay.png" alt="Jogabilidade da cronologia mostrando um cartão de evento histórico a ser colocado na cronologia" class="showcase-phone" width="270" height="585" loading="lazy">
+                        <p class="showcase-caption">Ordena a Cronologia</p>
+                    </div>
+                    <div class="showcase-item">
+                        <img src="/images/screenshots/results.png" alt="Ecrã de resultados mostrando pontuação final, contagem de corretas e incorretas e percentagem de precisão" class="showcase-phone" width="270" height="585" loading="lazy">
+                        <p class="showcase-caption">Acompanha a Tua Pontuação</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <h2>Joga à Tua Maneira</h2>
+            <p class="features-subtitle">Um desafio diário, aventuras a solo e multijogador — tudo disponível para todos os jogadores.</p>
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">📅</div>
+                    <h3>Desafio Diário</h3>
+                    <p>Um novo desafio todos os dias — 4 eventos numa categoria surpresa. Rápido, divertido e o mesmo desafio para todos. Compara com amigos!</p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">🎯</div>
+                    <h3>Aventura Solo</h3>
+                    <p>Progride através de eventos históricos, ganha rankings de F a S+ e acompanha o teu domínio em cada categoria.</p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">👨‍👩‍👧‍👦</div>
+                    <h3>Passa e Joga</h3>
+                    <p>Jogam à vez num só dispositivo. Perfeito para noites de jogos em família, viagens de carro ou sempre que queiram ver quem sabe mais história.</p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">🌐</div>
+                    <h3>Jogo em Rede</h3>
+                    <p>Liga vários dispositivos por WiFi local para competições em equipa. Ótimo para salas de aula, festas e jogos em grupo com pontuação em tempo real.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="plans" id="planos">
+            <h2>Escolhe o Teu Plano</h2>
+            <p class="plans-subtitle">Subscreve mensal ou anualmente, ou paga uma vez para acesso vitalício.</p>
+
+            <div class="plans-grid">
+                <article class="plan-card">
+                    <div class="plan-header">
+                        <h3>Grátis</h3>
+                        <div class="plan-price">Grátis</div>
+                    </div>
+                    <ul class="plan-features">
+                        <li>8 categorias</li>
+                        <li>Desbloqueia qualquer categoria durante 1 hora com um anúncio</li>
+                        <li>Novas categorias no dia de lançamento</li>
+                    </ul>
+                </article>
+
+                <article class="plan-card plan-card-featured">
+                    <div class="plan-badge">Mais Popular</div>
+                    <div class="plan-header">
+                        <h3>Explorer</h3>
+                        <div class="plan-price">Mensal · Anual · Vitalício</div>
+                    </div>
+                    <ul class="plan-features">
+                        <li>Todas as categorias, sem anúncios</li>
+                        <li>Novas categorias no dia de lançamento</li>
+                        <li>Vota na próxima categoria da comunidade</li>
+                    </ul>
+                </article>
+
+                <article class="plan-card plan-card-premium">
+                    <div class="plan-header">
+                        <h3>Historian</h3>
+                        <div class="plan-price">Mensal · Anual · Vitalício</div>
+                    </div>
+                    <ul class="plan-features">
+                        <li>Tudo incluído no Explorer</li>
+                        <li>Pacotes de expansão incluídos</li>
+                        <li>Modo de jogo bónus History Pinpoint</li>
+                        <li>Vota no próximo pacote de expansão</li>
+                    </ul>
+                </article>
+            </div>
+
+            <div class="cascade-explainer">
+                <h3>Duas Novas Categorias Todos os Meses</h3>
+                <p>Uma categoria escolhida por votação da comunidade, outra escolhida por nós. Todos os níveis recebem acesso no dia de lançamento — subscritores jogam sem anúncios, jogadores gratuitos podem desbloquear qualquer nova categoria durante 1 hora com um anúncio.</p>
+                <div class="cascade-table-wrapper">
+                    <table class="cascade-table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Grátis</th>
+                                <th>Explorer</th>
+                                <th>Historian</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Categorias</td>
+                                <td>8 permanentes + desbloqueio por anúncio</td>
+                                <td>Todas (sem anúncios)</td>
+                                <td>Todas (sem anúncios)</td>
+                            </tr>
+                            <tr>
+                                <td>Novas categorias</td>
+                                <td>Dia 1 (desbloqueio de 1 hora por anúncio)</td>
+                                <td>Dia 1 (sem anúncios)</td>
+                                <td>Dia 1 (sem anúncios)</td>
+                            </tr>
+                            <tr>
+                                <td>Pacotes de expansão</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>Todos incluídos</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories" id="categorias">
+            <h2>12 Categorias no Lançamento</h2>
+
+            <div class="category-grid">
+                <div class="category-group">
+                    <h3>Regiões do Mundo</h3>
+                    <ul class="category-list">
+                        <li>História dos EUA</li>
+                        <li>História Europeia</li>
+                        <li>História de Portugal</li>
+                        <li>História da Alemanha</li>
+                    </ul>
+                </div>
+
+                <div class="category-group">
+                    <h3>Ciência</h3>
+                    <ul class="category-list">
+                        <li>Descobertas Científicas</li>
+                    </ul>
+                </div>
+
+                <div class="category-group">
+                    <h3>Conflito e Civilização</h3>
+                    <ul class="category-list">
+                        <li>Guerras Mundiais</li>
+                        <li>Civilizações Antigas</li>
+                    </ul>
+                </div>
+
+                <div class="category-group">
+                    <h3>Cultura e Entretenimento</h3>
+                    <ul class="category-list">
+                        <li>Música e Entretenimento</li>
+                        <li>História da Televisão</li>
+                        <li>História do Desporto</li>
+                        <li>Comida e Bebida</li>
+                    </ul>
+                </div>
+
+                <div class="category-group">
+                    <h3>História Social</h3>
+                    <ul class="category-list">
+                        <li>História das Mulheres</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="coming-next">
+                <h3>Em Breve em Maio</h3>
+                <p><strong>História dos Países Baixos</strong> e <strong>História da América do Sul</strong> — as nossas primeiras categorias pós-lançamento, acompanhadas das edições em neerlandês e espanhol. Depois disso, duas novas categorias todos os meses — uma escolhida por votação da comunidade, outra pela equipa do Sorting History.</p>
+            </div>
+        </section>
+
+        <section class="customization">
+            <h2>O Teu Jogo, As Tuas Regras</h2>
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">⏱️</div>
+                    <h3>Escolhe a Duração</h3>
+                    <p>Sprint (5 rondas), Normal (10), Maratona (15), Ultra Maratona (20) ou Épico (30). Pausa rápida ou mergulho profundo.</p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">📚</div>
+                    <h3>Escolhe as Tuas Categorias</h3>
+                    <p>Seleciona qualquer combinação das tuas categorias desbloqueadas. Foca-te nos teus interesses ou mistura tudo.</p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">🎮</div>
+                    <h3>Define a Dificuldade</h3>
+                    <p>Amigável (sem penalizações), Competitivo (+2/-1) ou Especialista (+3/-2). De casual a desafio sério.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="faq" id="faq">
+            <h2>Perguntas Frequentes</h2>
+
+            <details class="faq-item">
+                <summary>O que é o Sorting History?</summary>
+                <p>Um jogo de trivia de história onde colocas eventos numa cronologia pela ordem correta. Em vez de escolheres A, B, C ou D, arrastas os eventos para a posição cronológica — quanto mais perto acertares, mais pontos ganhas. 12 categorias no lançamento com duas novas adicionadas todos os meses.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>O Sorting History é grátis?</summary>
+                <p>Sim. Descarrega gratuitamente e joga 8 categorias com anúncios. Também podes desbloquear qualquer categoria durante 1 hora ao ver um único anúncio. Explorer e Historian removem todos os anúncios e desbloqueiam todas as categorias permanentemente. Paga mensal, anual ou uma única vez para acesso vitalício.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Este jogo é bom para famílias com crianças?</summary>
+                <p>Absolutamente. O modo de pontuação Amigável remove penalizações por respostas erradas, tornando-o ótimo para jogadores mais jovens. Cada evento inclui uma breve explicação após o colocares, para que as crianças aprendam a história por trás de cada resposta. Sem violência, sem conteúdo para adultos — concebido para ser educativo e divertido para todas as idades.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Os professores podem usar isto nas aulas?</summary>
+                <p>Sim. O Jogo em Rede liga vários dispositivos por WiFi local para competições em sala de aula. Seleciona categorias específicas para corresponder ao teu currículo e define a duração do jogo para caber no tempo da aula. O Jogo em Rede é gratuito para todos.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Como funcionam as novas categorias?</summary>
+                <p>Duas novas categorias são lançadas todos os meses — uma a cada duas semanas. Uma escolhida por votação da comunidade, outra pela equipa do Sorting History. Vota após cada jogo. Todos os níveis recebem acesso no dia de lançamento. Subscritores jogam sem anúncios, jogadores gratuitos desbloqueiam novas categorias durante 1 hora com um anúncio.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>O que é o Desafio Diário?</summary>
+                <p>Todos os dias, o Sorting History dá-te um novo desafio — 4 eventos numa categoria surpresa. Ordena-os por ordem cronológica em menos de 5 minutos. É o mesmo desafio para todos, por isso podes comparar com amigos!</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>O jogo repete os mesmos eventos?</summary>
+                <p>O Sorting History utiliza reciclagem inteligente de conteúdo. Os eventos que erraste voltam com mais frequência para te ajudar a aprender. Os eventos que já dominaste aparecem menos vezes. Quanto mais jogas, mais inteligente o jogo se torna a desafiar-te.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Quantos eventos existem?</summary>
+                <p>Mais de 1.200 eventos no lançamento em 12 categorias, com novos eventos adicionados todos os meses. As tuas categorias continuam a crescer — vais receber uma notificação quando novos eventos chegarem.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Em que dispositivos funciona?</summary>
+                <p>iPhone e iPad com iOS 15.0 ou posterior.</p>
+            </details>
         </section>
 
         <section class="notify">
@@ -76,14 +557,15 @@
     <footer>
         <div class="footer-content">
             <div class="footer-links">
-                <a href="/about.html">Sobre</a>
+                <a href="/pt/about.html">Sobre</a>
                 <a href="/privacy.html">Política de Privacidade</a>
                 <a href="/terms.html">Termos de Serviço</a>
-                <a href="/support.html">Suporte</a>
-                <a href="mailto:hello@sortinghistory.com">Contacto</a>
+                <a href="/pt/support.html">Suporte</a>
+                <a href="mailto:hello@emptycupmedia.com">Contacto</a>
             </div>
             <p class="copyright">&copy; 2026 Sorting History. Todos os direitos reservados.</p>
         </div>
     </footer>
+    <script src="/scripts/nav-toggle.js" defer></script>
 </body>
 </html>

@@ -78,7 +78,7 @@
                 "name": "What history trivia app has the most content?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Sorting History has the most dedicated history content with 1,200+ researched events across 12 categories at launch, with new categories added monthly. Each category has 100+ events with dates, descriptions, and historical context."
+                    "text": "Sorting History has the most dedicated history content with 1,200+ researched events across 12 categories at launch, with new categories planned monthly. Each category has 100+ events with dates, descriptions, and historical context."
                 }
             },
             {
@@ -107,9 +107,12 @@
     <header>
         <nav>
             <a href="/" class="logo">Sorting History</a>
+            <button class="nav-toggle" aria-label="Menu" aria-expanded="false">&#9776;</button>
             <div class="nav-links">
                 <a href="/about.html">About</a>
                 <a href="/features.html">Features</a>
+                <a href="/family.html">Families</a>
+                <a href="/compare/">Compare</a>
                 <a href="/support.html">Support</a>
                 <a href="/privacy.html">Privacy</a>
                 <a href="/terms.html">Terms</a>
@@ -168,8 +171,8 @@
                         <td><strong>Timeline (Board Game)</strong></td>
                         <td>Tabletop timeline game</td>
                         <td>Physical card placement</td>
-                        <td>~100 events per box</td>
-                        <td>$15-20 per box</td>
+                        <td>55-96 events per box</td>
+                        <td>$13-20 per box</td>
                     </tr>
                 </tbody>
             </table>
@@ -192,14 +195,14 @@
                 <li><strong>Local multiplayer:</strong> Pass & Play (2-6 teams, one device) and Network Play (two devices, same WiFi).</li>
                 <li><strong>Works offline:</strong> Everything is stored locally. Play on a plane.</li>
                 <li><strong>4 languages:</strong> English, German, Portuguese, Dutch.</li>
-                <li><strong>Community votes on new content:</strong> Two new categories added monthly. You vote on what's next.</li>
+                <li><strong>Community votes on new content:</strong> New categories planned monthly. You vote on what's next.</li>
             </ul>
 
             <h3>Limitations</h3>
             <ul>
                 <li>History only. If you want science, sports, or pop culture trivia, look elsewhere.</li>
                 <li>No online matchmaking. Multiplayer is local only.</li>
-                <li>4 languages (not 25 like Trivia Crack).</li>
+                <li>4 languages (not 20+ like Trivia Crack).</li>
                 <li>New app. Smaller community than established games.</li>
             </ul>
 
@@ -215,7 +218,7 @@
                 <li><strong>Massive community:</strong> Hundreds of millions of downloads. Easy to find opponents.</li>
                 <li><strong>Topic variety:</strong> Science, Entertainment, Art, Geography, Sports, and History. Something for everyone.</li>
                 <li><strong>Online multiplayer:</strong> Challenge friends or random opponents worldwide.</li>
-                <li><strong>25 languages.</strong></li>
+                <li><strong>20+ languages.</strong></li>
                 <li><strong>User-created content:</strong> AI-powered quiz creator lets anyone add questions.</li>
             </ul>
 
@@ -224,11 +227,11 @@
                 <li>History is just one of six categories. You'll spend most of your time on other topics.</li>
                 <li>Multiple choice format. You can guess without knowing anything.</li>
                 <li>Timed answers. No time to think deeply.</li>
-                <li>Heavy ads and in-app purchase prompts in the free tier.</li>
-                <li>User-created content quality varies significantly.</li>
+                <li>Ads in the free tier. Subscription options from $4.99/mo.</li>
+                <li>User-created content alongside AI-generated questions.</li>
             </ul>
 
-            <p><strong>Price:</strong> Free with ads and in-app purchases ($0.99-$24.99).</p>
+            <p><strong>Price:</strong> Free with ads. Subscriptions from $4.99/mo, or in-app purchases ($0.99-$24.99).</p>
             <p><a href="/compare/trivia-crack.html">Read full comparison: Sorting History vs Trivia Crack</a></p>
         </section>
 
@@ -289,14 +292,14 @@
 
             <h3>Limitations</h3>
             <ul>
-                <li>~100 events per box. Content runs out.</li>
-                <li>New content means buying more boxes ($15-20 each).</li>
+                <li>55-96 events per box. Content runs out.</li>
+                <li>New content means buying more boxes ($13-20 each).</li>
                 <li>Cards wear out, bend, and show date imprints.</li>
                 <li>Requires in-person play. No solo or remote option.</li>
                 <li>No difficulty options.</li>
             </ul>
 
-            <p><strong>Price:</strong> $15-20 per box.</p>
+            <p><strong>Price:</strong> $13-20 per box.</p>
             <p><a href="/compare/timeline-board-game.html">Read full comparison: Sorting History vs Timeline Board Game</a></p>
         </section>
 
@@ -336,7 +339,7 @@
 
         <section id="cta" class="notify">
             <h2>Try Sorting History Free</h2>
-            <p>8 categories, 800+ events, three difficulty levels, works offline. Launching late March 2026.</p>
+            <p>8 categories, 800+ events, three difficulty levels, works offline. Launching April 2026.</p>
             <form action="/api/subscribe" method="POST" class="notify-form">
                 <input type="email" name="email" placeholder="your@email.com" required class="notify-input">
                 <button type="submit" class="notify-btn">Notify Me at Launch</button>
@@ -353,10 +356,11 @@
                 <a href="/privacy.html">Privacy Policy</a>
                 <a href="/terms.html">Terms of Service</a>
                 <a href="/support.html">Support</a>
-                <a href="mailto:hello@sortinghistory.com">Contact</a>
+                <a href="mailto:hello@emptycupmedia.com">Contact</a>
             </div>
             <p class="copyright">&copy; 2026 Sorting History. All rights reserved.</p>
         </div>
     </footer>
+    <script src="/scripts/nav-toggle.js" defer></script>
 </body>
 </html>

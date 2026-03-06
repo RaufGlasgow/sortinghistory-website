@@ -20,15 +20,20 @@ export default {
       return new Response('Method not allowed', { status: 405 });
     }
 
+    // 301 redirect /index.html → / to avoid duplicate content in Google
+    if (url.pathname === '/index.html') {
+      return Response.redirect(`${url.origin}/`, 301);
+    }
+
     // Language auto-redirect on root path only
-    if (url.pathname === '/' || url.pathname === '/index.html') {
+    if (url.pathname === '/') {
       const redirect = handleLanguageRedirect(request, url);
       if (redirect) return redirect;
     }
 
     // Serve static assets, set lang_pref cookie for English root visitors
     const response = await env.ASSETS.fetch(request);
-    if ((url.pathname === '/' || url.pathname === '/index.html') && !getCookie(request, 'lang_pref')) {
+    if (url.pathname === '/' && !getCookie(request, 'lang_pref')) {
       const newResponse = new Response(response.body, response);
       newResponse.headers.append('Set-Cookie', 'lang_pref=en; path=/; max-age=31536000; SameSite=Lax');
       return newResponse;

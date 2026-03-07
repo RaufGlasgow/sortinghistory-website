@@ -30,5 +30,11 @@ Allow: /
 User-agent: YouBot
 Allow: /
 
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
 # Sitemap location
 Sitemap: https://sortinghistory.com/sitemap.xml

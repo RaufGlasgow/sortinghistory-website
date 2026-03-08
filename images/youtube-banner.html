@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 2560px;
+    height: 1440px;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Subtle grid pattern */
+  body::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image:
+      linear-gradient(rgba(224, 120, 80, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(224, 120, 80, 0.03) 1px, transparent 1px);
+    background-size: 80px 80px;
+  }
+
+  .safe-area {
+    /* YouTube safe area: 1235x338 centered */
+    width: 1235px;
+    height: 338px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .icon-area {
+    flex-shrink: 0;
+  }
+
+  /* Recreate the clock icon with CSS */
+  .clock-icon {
+    width: 180px;
+    height: 180px;
+    position: relative;
+  }
+
+  .clock-circle {
+    width: 160px;
+    height: 160px;
+    border: 6px solid #e07850;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+  }
+
+  .clock-arc {
+    width: 180px;
+    height: 180px;
+    border: 6px solid transparent;
+    border-top: 6px solid #e07850;
+    border-left: 6px solid #e07850;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(-10deg);
+  }
+
+  .clock-tick {
+    position: absolute;
+    top: 20px;
+    left: -8px;
+    width: 20px;
+    height: 6px;
+    background: #e07850;
+    transform: rotate(-45deg);
+    border-radius: 3px;
+  }
+
+  .text-area {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .title {
+    font-size: 72px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+  .title span {
+    color: #e07850;
+  }
+
+  .tagline {
+    font-size: 32px;
+    color: #a0a0b0;
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+
+  .divider {
+    width: 120px;
+    height: 3px;
+    background: linear-gradient(90deg, #e07850, #ff7f6e);
+    border-radius: 2px;
+  }
+
+  /* Decorative timeline dots outside safe area */
+  .timeline-dots {
+    position: absolute;
+    bottom: 380px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    opacity: 0.15;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    background: #e07850;
+    border-radius: 50%;
+  }
+
+  .dot-line {
+    width: 80px;
+    height: 2px;
+    background: #e07850;
+    align-self: center;
+  }
+
+  /* Decorative year markers outside safe area */
+  .year-markers {
+    position: absolute;
+    bottom: 340px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    opacity: 0.08;
+  }
+
+  .year {
+    font-size: 48px;
+    color: #e07850;
+    font-weight: 300;
+    font-family: -apple-system, BlinkMacSystemFont, monospace;
+  }
+</style>
+</head>
+<body>
+  <div class="timeline-dots">
+    <div class="dot"></div>
+    <div class="dot-line"></div>
+    <div class="dot"></div>
+    <div class="dot-line"></div>
+    <div class="dot"></div>
+    <div class="dot-line"></div>
+    <div class="dot"></div>
+    <div class="dot-line"></div>
+    <div class="dot"></div>
+    <div class="dot-line"></div>
+    <div class="dot"></div>
+    <div class="dot-line"></div>
+    <div class="dot"></div>
+  </div>
+
+  <div class="year-markers">
+    <span class="year">1776</span>
+    <span class="year">1815</span>
+    <span class="year">1903</span>
+    <span class="year">1969</span>
+    <span class="year">2026</span>
+  </div>
+
+  <div class="safe-area">
+    <div class="icon-area">
+      <img src="app-icon.png" width="180" height="180" style="border-radius: 36px;">
+    </div>
+    <div class="text-area">
+      <div class="title">Sorting <span>History</span></div>
+      <div class="divider"></div>
+      <div class="tagline">Which came first? Test your history knowledge.</div>
+    </div>
+  </div>
+</body>
+</html>

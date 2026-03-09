@@ -1,3 +1,11 @@
+var messages = {
+  en: { subscribing: 'Subscribing...', subscribed: 'Subscribed!', error: 'Network error. Please try again.' },
+  pt: { subscribing: 'A subscrever...', subscribed: 'Subscrito!', error: 'Erro de rede. Tente novamente.' },
+  de: { subscribing: 'Wird abonniert...', subscribed: 'Abonniert!', error: 'Netzwerkfehler. Bitte versuchen Sie es erneut.' },
+  nl: { subscribing: 'Bezig met inschrijven...', subscribed: 'Ingeschreven!', error: 'Netwerkfout. Probeer het opnieuw.' },
+  es: { subscribing: 'Suscribiendo...', subscribed: '¡Suscrito!', error: 'Error de red. Inténtalo de nuevo.' },
+};
+
 document.querySelectorAll('.notify-form').forEach(function(form) {
   form.addEventListener('submit', async function(e) {
     e.preventDefault();
@@ -5,9 +13,13 @@ document.querySelectorAll('.notify-form').forEach(function(form) {
     var button = form.querySelector('button');
     var input = form.querySelector('input[type="email"]');
     var originalText = button.textContent;
+    var lang = document.documentElement.lang || 'en';
+    lang = lang.substring(0, 2);
+    var msg = messages[lang] || messages.en;
     var body = new FormData(form);
+    body.append('lang', lang);
 
-    button.textContent = 'Subscribing...';
+    button.textContent = msg.subscribing;
     button.disabled = true;
     input.disabled = true;
 
@@ -20,7 +32,7 @@ document.querySelectorAll('.notify-form').forEach(function(form) {
       var data = await response.json();
 
       if (data.success) {
-        button.textContent = 'Subscribed!';
+        button.textContent = msg.subscribed;
         button.classList.add('notify-btn-success');
         input.value = '';
         showMessage(form, data.message, 'success');
@@ -34,7 +46,7 @@ document.querySelectorAll('.notify-form').forEach(function(form) {
       button.textContent = originalText;
       button.disabled = false;
       input.disabled = false;
-      showMessage(form, 'Network error. Please try again.', 'error');
+      showMessage(form, msg.error, 'error');
     }
   });
 });

@@ -9,6 +9,7 @@ export async function onRequestPost(context) {
   try {
     const formData = await request.formData();
     const email = formData.get('email')?.toLowerCase().trim();
+    const lang = formData.get('lang') || 'en';
 
     if (!email || !isValidEmail(email)) {
       return new Response(JSON.stringify({
@@ -19,6 +20,7 @@ export async function onRequestPost(context) {
 
     const metadata = {
       email,
+      lang,
       timestamp: new Date().toISOString(),
       source: request.headers.get('Referer') || 'direct',
       userAgent: request.headers.get('User-Agent') || 'unknown',
@@ -26,9 +28,17 @@ export async function onRequestPost(context) {
 
     await env.LAUNCH_EMAILS.put(email, JSON.stringify(metadata));
 
+    const successMessages = {
+      en: "You'll be notified at launch!",
+      pt: "Sera notificado no lancamento!",
+      de: "Sie werden beim Start benachrichtigt!",
+      nl: "U wordt bij de lancering op de hoogte gebracht!",
+      es: "¡Te notificaremos en el lanzamiento!",
+    };
+
     return new Response(JSON.stringify({
       success: true,
-      message: "You'll be notified at launch!",
+      message: successMessages[lang] || successMessages.en,
     }), { status: 200, headers });
 
   } catch (error) {

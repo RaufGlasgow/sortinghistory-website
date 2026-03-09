@@ -278,7 +278,7 @@ async function sendWelcomeEmail(email, env) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'Sorting History <hello@emptycupmedia.com>',
+        from: 'Sorting History <hello@sortinghistory.com>',
         to: [email],
         subject: "You're on the list!",
         html,

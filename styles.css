@@ -199,8 +199,15 @@ main {
 }
 
 .feature-icon {
-    font-size: 3rem;
     margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.feature-icon svg {
+    width: 40px;
+    height: 40px;
+    fill: var(--accent-orange);
 }
 
 .feature-card h3 {

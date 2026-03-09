@@ -1323,3 +1323,43 @@ section.faq > * {
 .about-cta .notify-btn {
     display: inline-block;
 }
+
+/* Comparison Page Visual */
+.comparison-visual {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0 3rem;
+    flex-wrap: wrap;
+}
+
+.comparison-visual-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.comparison-visual-item img {
+    width: 200px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.comparison-visual-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary, #666);
+    font-weight: 500;
+}
+
+.comparison-visual-inline {
+    justify-content: flex-start;
+    margin: 1rem 0 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .comparison-visual-item img {
+        width: 150px;
+    }
+}

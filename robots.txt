@@ -15,13 +15,19 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-User-agent: anthropic-ai
+User-agent: ClaudeBot
 Allow: /
 
-User-agent: Claude-Web
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
 Allow: /
 
 User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
 Allow: /
 
 User-agent: Amazonbot
@@ -30,10 +36,28 @@ Allow: /
 User-agent: YouBot
 Allow: /
 
-User-agent: ClaudeBot
+User-agent: CCBot
 Allow: /
 
-User-agent: CCBot
+User-agent: GrokBot
+Allow: /
+
+User-agent: xAI-Grok
+Allow: /
+
+User-agent: Grok-DeepSearch
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: FacebookBot
 Allow: /
 
 # Sitemap location

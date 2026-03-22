@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kit de Imprensa - Sorting History | Jogo de Trivia de História para iOS</title>
+    <meta name="description" content="Kit de imprensa do Sorting History, um jogo indie de trivia de história para iOS. Ficha técnica, funcionalidades, história do programador, capturas de ecrã e contacto de imprensa.">
+    <meta name="keywords" content="kit de imprensa Sorting History, jogo indie imprensa, trivia de história iOS, jogo de cronologia, Ra'uf Glasgow, Empty Cup Media">
+
+    <!-- AI Search Optimization -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Kit de Imprensa - Sorting History">
+    <meta property="og:description" content="Kit de imprensa do Sorting History, um jogo indie de trivia de história para iOS com 12 categorias, mais de 1.200 eventos e 5 idiomas.">
+    <meta property="og:image" content="https://sortinghistory.com/images/og-image.png">
+    <meta property="og:url" content="https://sortinghistory.com/pt/press.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Sorting History">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kit de Imprensa - Sorting History">
+    <meta name="twitter:description" content="Kit de imprensa do Sorting History, um jogo indie de trivia de história para iOS com 12 categorias, mais de 1.200 eventos e 5 idiomas.">
+    <meta name="twitter:image" content="https://sortinghistory.com/images/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link rel="apple-touch-icon" href="/images/app-icon.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://sortinghistory.com/pt/press.html">
+
+    <!-- Language Alternates -->
+    <link rel="alternate" hreflang="en" href="https://sortinghistory.com/press.html">
+    <link rel="alternate" hreflang="de" href="https://sortinghistory.com/de/press.html">
+    <link rel="alternate" hreflang="pt" href="https://sortinghistory.com/pt/press.html">
+    <link rel="alternate" hreflang="nl" href="https://sortinghistory.com/nl/press.html">
+    <link rel="alternate" hreflang="es" href="https://sortinghistory.com/es/press.html">
+    <link rel="alternate" hreflang="x-default" href="https://sortinghistory.com/press.html">
+
+    <!-- Structured Data: Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Kit de Imprensa do Sorting History",
+        "description": "Kit de imprensa do Sorting History, um jogo indie de trivia de história para iOS com lançamento a 16 de abril de 2026.",
+        "author": {
+            "@type": "Person",
+            "name": "Ra'uf Glasgow"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Empty Cup Media",
+            "url": "https://emptycupmedia.com"
+        },
+        "datePublished": "2026-03-17",
+        "dateModified": "2026-03-17",
+        "mainEntityOfPage": "https://sortinghistory.com/pt/press.html",
+        "about": {
+            "@type": "SoftwareApplication",
+            "name": "Sorting History",
+            "applicationCategory": "GameApplication",
+            "operatingSystem": "iOS 15.0 ou posterior"
+        }
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        .fact-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        .fact-table td {
+            padding: 0.6rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            vertical-align: top;
+        }
+        .fact-table td:first-child {
+            color: var(--text-secondary);
+            width: 160px;
+            font-size: 0.9rem;
+        }
+        .fact-table td:last-child {
+            color: var(--text-primary);
+        }
+        .fact-table a {
+            color: var(--accent-orange);
+            text-decoration: none;
+        }
+        .fact-table a:hover {
+            text-decoration: underline;
+        }
+        .press-section {
+            margin-bottom: 3rem;
+        }
+        .press-section h2 {
+            color: var(--accent-orange);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+        .press-section h3 {
+            color: var(--text-primary);
+            margin: 1.5rem 0 0.5rem;
+            font-size: 1.1rem;
+        }
+        .tier-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        .tier-table th {
+            text-align: left;
+            color: var(--accent-orange);
+            padding: 0.5rem 1rem 0.5rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+        .tier-table td {
+            padding: 0.5rem 1rem 0.5rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        .difficulty-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        .difficulty-table th {
+            text-align: left;
+            color: var(--accent-orange);
+            padding: 0.5rem 1rem 0.5rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+        .difficulty-table td {
+            padding: 0.5rem 1rem 0.5rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        .dev-story {
+            border-left: 3px solid var(--accent-orange);
+            padding: 1.2rem 1.5rem;
+            margin: 1.5rem 0;
+            background: rgba(224,120,80,0.04);
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        .contact-box {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+        .contact-box p {
+            margin: 0.4rem 0;
+        }
+        .contact-box a {
+            color: var(--accent-orange);
+            text-decoration: none;
+        }
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+        .category-list {
+            columns: 2;
+            column-gap: 2rem;
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+        .category-list li {
+            padding: 0.3rem 0;
+            color: var(--text-secondary);
+        }
+        .category-list li .tier-badge {
+            font-size: 0.75rem;
+            padding: 0.15rem 0.5rem;
+            border-radius: 4px;
+            margin-left: 0.5rem;
+        }
+        .tier-free { background: rgba(255,255,255,0.08); color: var(--text-secondary); }
+        .tier-premium { background: rgba(74,158,255,0.15); color: var(--accent-blue); }
+        .tier-epic { background: rgba(224,120,80,0.15); color: var(--accent-orange); }
+        .assets-note {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border: 1px solid rgba(255,255,255,0.06);
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/pt/" class="logo">Sorting History</a>
+            <button class="nav-toggle" aria-label="Menu" aria-expanded="false">&#9776;</button>
+            <div class="nav-links">
+                <a href="/pt/about.html">Sobre</a>
+                <a href="/pt/features.html">Funcionalidades</a>
+                <a href="/how-to-play/">Como Jogar</a>
+                <a href="/pt/family.html">Famílias</a>
+                <a href="/compare/">Comparar</a>
+                <a href="/pt/#planos">Planos</a>
+                <a href="/pt/support.html">Suporte</a>
+            </div>
+            <div class="lang-picker">
+                <a href="/press.html">EN</a>
+                <a href="/de/press.html">DE</a>
+                <a href="/pt/press.html" class="lang-active">PT</a>
+                <a href="/nl/press.html">NL</a>
+                <a href="/es/press.html">ES</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <h1>Kit de Imprensa</h1>
+
+        <section class="press-section" id="fact-sheet">
+            <h2>Ficha Técnica</h2>
+            <table class="fact-table">
+                <tr><td>Slogan</td><td><em>Cada evento no seu lugar.</em></td></tr>
+                <tr><td>Programador</td><td>Ra'uf Glasgow / Empty Cup Media</td></tr>
+                <tr><td>Plataforma</td><td>iOS (iPhone + iPad)</td></tr>
+                <tr><td>Engine</td><td>SwiftUI nativo</td></tr>
+                <tr><td>Lançamento</td><td>16 de abril de 2026</td></tr>
+                <tr><td>Preço</td><td>Grátis (com anúncios) / Explorer 1,99 $/mês / Historian 2,99 $/mês</td></tr>
+                <tr><td>Conteúdo</td><td>12 categorias, mais de 1.200 eventos históricos pesquisados no lançamento</td></tr>
+                <tr><td>Modos de jogo</td><td>Sorting History, History Pinpoint, Desafio Diário, Modo Aprendizagem</td></tr>
+                <tr><td>Multijogador</td><td>Passa e Joga (2-6 jogadores, 1 dispositivo) + Jogo em Rede (WiFi, vários dispositivos)</td></tr>
+                <tr><td>Funciona offline</td><td>Sim</td></tr>
+                <tr><td>Idiomas</td><td>Inglês, alemão, português, neerlandês, espanhol (LATAM)</td></tr>
+                <tr><td>Classificação etária</td><td>4+</td></tr>
+                <tr><td>Website</td><td><a href="https://sortinghistory.com">sortinghistory.com</a></td></tr>
+                <tr><td>X</td><td><a href="https://x.com/SortingHistory">@SortingHistory</a></td></tr>
+                <tr><td>Instagram</td><td><a href="https://instagram.com/sortinghistory">@sortinghistory</a></td></tr>
+                <tr><td>YouTube</td><td><a href="https://youtube.com/@SortingHistory">@SortingHistory</a></td></tr>
+                <tr><td>Bluesky</td><td><a href="https://bsky.app/profile/sortinghistory.com">@sortinghistory.com</a></td></tr>
+                <tr><td>Contacto</td><td><a href="mailto:hello@sortinghistory.com">hello@sortinghistory.com</a></td></tr>
+            </table>
+        </section>
+
+        <section class="press-section" id="what-is">
+            <h2>O que é o Sorting History?</h2>
+            <p>Sorting History é um jogo de trivia de história onde colocas eventos históricos na posição correta de uma cronologia em crescimento. Não é escolha múltipla -- comprometes-te com o lugar onde cada evento pertence, e a cronologia vai-se construindo enquanto jogas.</p>
+            <p>Cada ronda ensina-te algo novo. Se errares, vês exatamente onde o evento deveria estar -- com o ano e o contexto histórico. Se acertares, a tua confiança cresce. De qualquer forma, acabas por saber mais do que quando começaste.</p>
+            <p>O jogo começa com 12 categorias e mais de 1.200 eventos pesquisados -- desde Civilizações Antigas até às Guerras Mundiais, de Descobertas Científicas a Música &amp; Entretenimento. Todos os meses são adicionadas duas novas categorias: uma escolhida por votação da comunidade e outra por seleção editorial. Assim, o jogo continua sempre a crescer.</p>
+        </section>
+
+        <section class="press-section" id="how-it-plays">
+            <h2>Como se joga</h2>
+
+            <h3>Sorting History (modo principal)</h3>
+            <p>Uma categoria. Um conjunto de eventos. Coloca cada um na cronologia onde achas que pertence. Quanto mais precisa for a tua colocação, maior a tua pontuação. As partidas variam de sprints de 5 rondas a épicas de 30 rondas.</p>
+
+            <h3>Desafio Diário</h3>
+            <p>Quatro eventos, categoria surpresa, em menos de cinco minutos. Um novo desafio todos os dias. Obtém 100% para a "Vitória Perfeita!" ou supera os 75% para "Muito Bem!" Os resultados incluem um anel de pontuação com código de cores e um cartão de partilha sem spoilers.</p>
+
+            <h3>History Pinpoint</h3>
+            <p>Adivinha o ano exato em que ocorreu um evento histórico. Desliza o indicador de ano para ajustar a tua resposta. Mantém premido para avançar rapidamente pelas décadas. Quanto mais perto acertares, mais pontos ganhas.</p>
+
+            <h3>Modo Aprendizagem</h3>
+            <p>Ativa-o no modo individual e o jogo utiliza repetição espaçada -- os eventos que erras voltam com mais frequência até os dominares. Os eventos que já dominaste ficam em segundo plano. Cada sessão torna-se treino direcionado.</p>
+
+            <h3>Passa e Joga</h3>
+            <p>Passa o telemóvel a um amigo. De 2 a 6 jogadores dividem-se em equipas no mesmo dispositivo. Escolham as vossas categorias, a duração da partida, e descubram que equipa ordena melhor a história.</p>
+
+            <h3>Jogo em Rede</h3>
+            <p>Liga vários dispositivos por WiFi para competição simultânea. Sem contas, sem emparelhamento -- é só pegar e jogar.</p>
+        </section>
+
+        <section class="press-section" id="mastery">
+            <h2>Dois caminhos para a mestria</h2>
+
+            <h3>Caminho do Historian -- Conhecimento profundo</h3>
+            <p>Joga qualquer categoria e sobe de Student a Scholar, Professor, Expert, Authority e Luminary até ao cobiçado Laureate. Cada categoria acompanha o progresso de forma independente. Cada grau exige mais partidas, maior precisão e jogo consistente.</p>
+
+            <h3>Caminho do Scholar -- Conhecimento abrangente</h3>
+            <p>O teu grau global em toda a história. Joga de forma abrangente e sobe de Apprentice a Chronicler, Archivist, Curator, Sage e Oracle até Grandmaster -- o grau máximo, que exige mestria em 90% das categorias disponíveis.</p>
+
+            <p>O Painel de Mestria mostra exatamente o que precisas para o próximo grau: quantas partidas mais, que objetivo de precisão e que categorias explorar.</p>
+        </section>
+
+        <section class="press-section" id="difficulty">
+            <h2>Três níveis de dificuldade</h2>
+            <table class="difficulty-table">
+                <thead>
+                    <tr><th>Nível</th><th>Estilo</th><th>Para quem é</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Amigável</td><td>Sem penalizações, aprende ao teu ritmo</td><td>Novos jogadores, famílias, seniores, salas de aula</td></tr>
+                    <tr><td>Competitivo</td><td>Risco e recompensa moderados</td><td>Jogadores regulares que procuram um desafio</td></tr>
+                    <tr><td>Especialista</td><td>Apostas altas, grandes penalizações</td><td>Apaixonados por história que querem provar o que sabem</td></tr>
+                </tbody>
+            </table>
+            <p>Não há temporizador. Conhecimento acima de velocidade, sempre.</p>
+        </section>
+
+        <section class="press-section" id="different">
+            <h2>O que o torna diferente</h2>
+            <p><strong>Não é escolha múltipla.</strong> Todos os jogos de trivia dão-te A, B, C ou D. O Sorting History pede-te que te comprometas -- coloca o evento na cronologia e descobre se realmente conheces a tua história.</p>
+            <p><strong>Profundidade real.</strong> Mais de 1.200 eventos no lançamento em 12 categorias, com duas novas categorias adicionadas todos os meses. Isto não são 55 cartas que decoras num fim de semana.</p>
+            <p><strong>Dois caminhos de mestria.</strong> O Caminho do Historian recompensa o conhecimento profundo em categorias individuais. O Caminho do Scholar recompensa o conhecimento abrangente em toda a história. Nenhuma outra app de trivia de história oferece algo semelhante.</p>
+            <p><strong>Aprendes mesmo quando erras.</strong> Após cada ronda, vê a ordem correta com datas e contexto. Ativa o Modo Aprendizagem para repetição espaçada.</p>
+            <p><strong>Funciona offline.</strong> No avião, no comboio, no campismo -- não é necessária ligação à internet.</p>
+            <p><strong>Pensado para toda a família desde o início.</strong> Concebido para todas as idades. Passa e Joga transforma um único dispositivo numa noite de jogos para 2-6 pessoas. Sem contas para criar, sem complicações na configuração.</p>
+        </section>
+
+        <section class="press-section" id="categories">
+            <h2>Categorias de lançamento</h2>
+            <ul class="category-list">
+                <li>História dos EUA <span class="tier-badge tier-free">Grátis</span></li>
+                <li>Guerras Mundiais <span class="tier-badge tier-free">Grátis</span></li>
+                <li>Descobertas Científicas <span class="tier-badge tier-free">Grátis</span></li>
+                <li>Música &amp; Entretenimento <span class="tier-badge tier-free">Grátis</span></li>
+                <li>História do Desporto <span class="tier-badge tier-free">Grátis</span></li>
+                <li>Civilizações Antigas <span class="tier-badge tier-free">Grátis</span></li>
+                <li>História Europeia <span class="tier-badge tier-free">Grátis</span></li>
+                <li>História da Televisão <span class="tier-badge tier-free">Grátis</span></li>
+                <li>Comida &amp; Bebida <span class="tier-badge tier-premium">Explorer+</span></li>
+                <li>História de Portugal <span class="tier-badge tier-premium">Explorer+</span></li>
+                <li>História da Alemanha <span class="tier-badge tier-premium">Explorer+</span></li>
+                <li>História das Mulheres <span class="tier-badge tier-premium">Explorer+</span></li>
+            </ul>
+            <p>Os utilizadores da versão gratuita podem desbloquear qualquer categoria premium durante uma hora ao ver um anúncio. Após o lançamento, são adicionadas duas novas categorias mensalmente através de votação da comunidade.</p>
+        </section>
+
+        <section class="press-section" id="tiers">
+            <h2>Níveis de subscrição</h2>
+            <table class="tier-table">
+                <thead>
+                    <tr><th>Nível</th><th>Preço</th><th>O que inclui</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Grátis</td><td>0 $</td><td>8 categorias, mais de 800 eventos. Desbloqueia categorias premium com anúncio. Caminho do Scholar até Sage.</td></tr>
+                    <tr><td>Explorer</td><td>1,99 $/mês ou 9,99 $/ano</td><td>Todas as 12 categorias, sem anúncios. Novas categorias no dia de lançamento.</td></tr>
+                    <tr><td>Historian</td><td>2,99 $/mês ou 14,99 $/ano</td><td>Tudo do Explorer + categorias épicas (mais de 500 eventos cada) + History Pinpoint + votação em expansões + proteção de sequência.</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="press-section" id="story">
+            <h2>A história do programador</h2>
+            <blockquote class="dev-story">
+                "Sou produtor de televisão, não programador de jogos. O jogo preferido da minha mulher sempre foi o Chronology. Jogámo-lo durante dez anos. Um dia ela disse: 'Alguns destes factos estão a ficar ultrapassados. Gostava que houvesse uma forma de jogar um jogo de ordenar história que nunca ficasse ultrapassado.' Nove meses depois, com a ajuda do Claude, posso dizer que sim."
+            </blockquote>
+            <p>Ra'uf Glasgow construiu o Sorting History sozinho, utilizando desenvolvimento assistido por IA. Produtor de televisão de profissão, utilizou SwiftUI, StoreKit 2 e Claude para criar uma experiência iOS nativa com cinco idiomas, suporte para VoiceOver e jogo offline -- tudo como programador independente.</p>
+        </section>
+
+        <section class="press-section" id="assets">
+            <h2>Recursos multimédia</h2>
+            <div class="assets-note">
+                <p>Capturas de ecrã da app, vídeos de gameplay e o ícone da app estão disponíveis mediante pedido. Contacte <a href="mailto:hello@sortinghistory.com">hello@sortinghistory.com</a> para recursos em alta resolução.</p>
+                <p>O ícone da app e os recursos da marca podem ser utilizados em cobertura editorial sem modificações.</p>
+            </div>
+        </section>
+
+        <section class="press-section" id="contact">
+            <h2>Contacto de imprensa</h2>
+            <div class="contact-box">
+                <p><strong>Ra'uf Glasgow</strong> / Empty Cup Media</p>
+                <p>E-mail: <a href="mailto:hello@sortinghistory.com">hello@sortinghistory.com</a></p>
+                <p>Website: <a href="https://sortinghistory.com">sortinghistory.com</a></p>
+                <p>X: <a href="https://x.com/SortingHistory">@SortingHistory</a></p>
+                <p>YouTube: <a href="https://youtube.com/@SortingHistory">@SortingHistory</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="/pt/about.html">Sobre</a>
+                <a href="/how-to-play/">Como Jogar</a>
+                <a href="/pt/privacy.html">Política de Privacidade</a>
+                <a href="/pt/terms.html">Termos de Serviço</a>
+                <a href="/pt/support.html">Suporte</a>
+                <a href="mailto:hello@sortinghistory.com">Contacto</a>
+            </div>
+            <p class="copyright">&copy; 2026 Sorting History. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="/scripts/nav-toggle.js" defer></script>
+</body>
+</html>

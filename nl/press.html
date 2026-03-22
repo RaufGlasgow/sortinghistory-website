@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perskit - Sorting History | Geschiedenisquizspel voor iOS</title>
+    <meta name="description" content="Perskit voor Sorting History, een indie geschiedenisquizspel voor iOS. Factsheet, functies, ontwikkelaarsverhaal, screenshots en perscontact.">
+    <meta name="keywords" content="Sorting History perskit, indie game pers, geschiedenistrivia iOS, tijdlijnspel, Ra'uf Glasgow, Empty Cup Media">
+
+    <!-- AI Search Optimization -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Perskit - Sorting History">
+    <meta property="og:description" content="Perskit voor Sorting History, een indie geschiedenisquizspel voor iOS met 12 categorieën, meer dan 1.200 gebeurtenissen en 5 talen.">
+    <meta property="og:image" content="https://sortinghistory.com/images/og-image.png">
+    <meta property="og:url" content="https://sortinghistory.com/nl/press.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Sorting History">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Perskit - Sorting History">
+    <meta name="twitter:description" content="Perskit voor Sorting History, een indie geschiedenisquizspel voor iOS met 12 categorieën, meer dan 1.200 gebeurtenissen en 5 talen.">
+    <meta name="twitter:image" content="https://sortinghistory.com/images/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link rel="apple-touch-icon" href="/images/app-icon.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://sortinghistory.com/nl/press.html">
+
+    <!-- Language Alternates -->
+    <link rel="alternate" hreflang="en" href="https://sortinghistory.com/press.html">
+    <link rel="alternate" hreflang="de" href="https://sortinghistory.com/de/press.html">
+    <link rel="alternate" hreflang="pt" href="https://sortinghistory.com/pt/press.html">
+    <link rel="alternate" hreflang="nl" href="https://sortinghistory.com/nl/press.html">
+    <link rel="alternate" hreflang="es" href="https://sortinghistory.com/es/press.html">
+    <link rel="alternate" hreflang="x-default" href="https://sortinghistory.com/press.html">
+
+    <!-- Structured Data: Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Perskit van Sorting History",
+        "description": "Perskit voor Sorting History, een indie geschiedenisquizspel voor iOS met lancering op 16 april 2026.",
+        "author": {
+            "@type": "Person",
+            "name": "Ra'uf Glasgow"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Empty Cup Media",
+            "url": "https://emptycupmedia.com"
+        },
+        "datePublished": "2026-03-17",
+        "dateModified": "2026-03-17",
+        "mainEntityOfPage": "https://sortinghistory.com/nl/press.html",
+        "about": {
+            "@type": "SoftwareApplication",
+            "name": "Sorting History",
+            "applicationCategory": "GameApplication",
+            "operatingSystem": "iOS 15.0 of nieuwer"
+        }
+    }
+    </script>
+
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        .fact-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        .fact-table td {
+            padding: 0.6rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            vertical-align: top;
+        }
+        .fact-table td:first-child {
+            color: var(--text-secondary);
+            width: 160px;
+            font-size: 0.9rem;
+        }
+        .fact-table td:last-child {
+            color: var(--text-primary);
+        }
+        .fact-table a {
+            color: var(--accent-orange);
+            text-decoration: none;
+        }
+        .fact-table a:hover {
+            text-decoration: underline;
+        }
+        .press-section {
+            margin-bottom: 3rem;
+        }
+        .press-section h2 {
+            color: var(--accent-orange);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+        .press-section h3 {
+            color: var(--text-primary);
+            margin: 1.5rem 0 0.5rem;
+            font-size: 1.1rem;
+        }
+        .tier-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        .tier-table th {
+            text-align: left;
+            color: var(--accent-orange);
+            padding: 0.5rem 1rem 0.5rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+        .tier-table td {
+            padding: 0.5rem 1rem 0.5rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        .difficulty-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        .difficulty-table th {
+            text-align: left;
+            color: var(--accent-orange);
+            padding: 0.5rem 1rem 0.5rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+        .difficulty-table td {
+            padding: 0.5rem 1rem 0.5rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        .dev-story {
+            border-left: 3px solid var(--accent-orange);
+            padding: 1.2rem 1.5rem;
+            margin: 1.5rem 0;
+            background: rgba(224,120,80,0.04);
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        .contact-box {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+        .contact-box p {
+            margin: 0.4rem 0;
+        }
+        .contact-box a {
+            color: var(--accent-orange);
+            text-decoration: none;
+        }
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+        .category-list {
+            columns: 2;
+            column-gap: 2rem;
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+        .category-list li {
+            padding: 0.3rem 0;
+            color: var(--text-secondary);
+        }
+        .category-list li .tier-badge {
+            font-size: 0.75rem;
+            padding: 0.15rem 0.5rem;
+            border-radius: 4px;
+            margin-left: 0.5rem;
+        }
+        .tier-free { background: rgba(255,255,255,0.08); color: var(--text-secondary); }
+        .tier-premium { background: rgba(74,158,255,0.15); color: var(--accent-blue); }
+        .tier-epic { background: rgba(224,120,80,0.15); color: var(--accent-orange); }
+        .assets-note {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border: 1px solid rgba(255,255,255,0.06);
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/nl/" class="logo">Sorting History</a>
+            <button class="nav-toggle" aria-label="Menu" aria-expanded="false">&#9776;</button>
+            <div class="nav-links">
+                <a href="/nl/about.html">Over</a>
+                <a href="/nl/features.html">Functies</a>
+                <a href="/how-to-play/">Uitleg</a>
+                <a href="/nl/family.html">Gezinnen</a>
+                <a href="/compare/">Vergelijken</a>
+                <a href="/nl/#plans">Abonnementen</a>
+                <a href="/nl/support.html">Ondersteuning</a>
+            </div>
+            <div class="lang-picker">
+                <a href="/press.html">EN</a>
+                <a href="/de/press.html">DE</a>
+                <a href="/pt/press.html">PT</a>
+                <a href="/nl/press.html" class="lang-active">NL</a>
+                <a href="/es/press.html">ES</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <h1>Perskit</h1>
+
+        <section class="press-section" id="fact-sheet">
+            <h2>Factsheet</h2>
+            <table class="fact-table">
+                <tr><td>Slogan</td><td><em>Elk gebeurtenis op zijn plek.</em></td></tr>
+                <tr><td>Ontwikkelaar</td><td>Ra'uf Glasgow / Empty Cup Media</td></tr>
+                <tr><td>Platform</td><td>iOS (iPhone + iPad)</td></tr>
+                <tr><td>Engine</td><td>Native SwiftUI</td></tr>
+                <tr><td>Lancering</td><td>16 april 2026</td></tr>
+                <tr><td>Prijs</td><td>Gratis (met advertenties) / Explorer $ 1,99/maand / Historian $ 2,99/maand</td></tr>
+                <tr><td>Inhoud</td><td>12 categorieën, meer dan 1.200 onderzochte historische gebeurtenissen bij lancering</td></tr>
+                <tr><td>Spelmodi</td><td>Sorting History, History Pinpoint, Dagelijkse Uitdaging, Leermodus</td></tr>
+                <tr><td>Multiplayer</td><td>Doorgeven en Spelen (2-6 spelers, 1 apparaat) + Netwerkspel (wifi, meerdere apparaten)</td></tr>
+                <tr><td>Offline speelbaar</td><td>Ja</td></tr>
+                <tr><td>Talen</td><td>Engels, Duits, Portugees, Nederlands, Spaans (LATAM)</td></tr>
+                <tr><td>Leeftijdsclassificatie</td><td>4+</td></tr>
+                <tr><td>Website</td><td><a href="https://sortinghistory.com">sortinghistory.com</a></td></tr>
+                <tr><td>X</td><td><a href="https://x.com/SortingHistory">@SortingHistory</a></td></tr>
+                <tr><td>Instagram</td><td><a href="https://instagram.com/sortinghistory">@sortinghistory</a></td></tr>
+                <tr><td>YouTube</td><td><a href="https://youtube.com/@SortingHistory">@SortingHistory</a></td></tr>
+                <tr><td>Bluesky</td><td><a href="https://bsky.app/profile/sortinghistory.com">@sortinghistory.com</a></td></tr>
+                <tr><td>Contact</td><td><a href="mailto:hello@sortinghistory.com">hello@sortinghistory.com</a></td></tr>
+            </table>
+        </section>
+
+        <section class="press-section" id="what-is">
+            <h2>Wat is Sorting History?</h2>
+            <p>Sorting History is een geschiedenistriviaspel waarbij je historische gebeurtenissen op de juiste plek op een groeiende tijdlijn plaatst. Het is geen meerkeuze -- je bepaalt waar elke gebeurtenis thuishoort, en de tijdlijn groeit terwijl je speelt.</p>
+            <p>Elke ronde leert je iets nieuws. Heb je het fout, dan zie je precies waar de gebeurtenis thuishoort -- met het jaar en de historische context. Heb je het goed, dan groeit je zelfvertrouwen. Hoe dan ook, je weet achteraf meer dan daarvoor.</p>
+            <p>Het spel begint met 12 categorieën en meer dan 1.200 onderzochte gebeurtenissen -- van Oude Beschavingen tot de Wereldoorlogen, van Wetenschappelijke Ontdekkingen tot Muziek &amp; Entertainment. Elke maand komen er twee nieuwe categorieën bij: een gekozen door de community en een redactionele keuze. Zo blijft het spel groeien.</p>
+        </section>
+
+        <section class="press-section" id="how-it-plays">
+            <h2>Hoe het werkt</h2>
+
+            <h3>Sorting History (hoofdmodus)</h3>
+            <p>Een categorie. Een reeks gebeurtenissen. Plaats ze op de tijdlijn waar jij denkt dat ze thuishoren. Hoe preciezer je plaatsing, hoe hoger je score. Spelduur varieert van snelle rondes van 5 tot epische rondes van 30.</p>
+
+            <h3>Dagelijkse Uitdaging</h3>
+            <p>Vier gebeurtenissen, verrassingscategorie, binnen vijf minuten. Elke dag een nieuwe uitdaging. Scoor 100% voor een "Foutloze Overwinning!" of boven de 75% voor "Goed gedaan!" De resultaten bevatten een kleurgecodeerde scorering en een spoilervrije deelkaart.</p>
+
+            <h3>History Pinpoint</h3>
+            <p>Raad het exacte jaar van een historische gebeurtenis. Veeg over het jaardisplay om je schatting aan te passen. Houd ingedrukt om snel door de decennia te bladeren. Hoe dichter je erbij zit, hoe meer punten je verdient.</p>
+
+            <h3>Leermodus</h3>
+            <p>Zet dit aan bij solospel en het spel gebruikt gespreide herhaling -- gebeurtenissen die je fout hebt komen vaker terug tot je ze beheerst. Gebeurtenissen die je al kent, verdwijnen naar de achtergrond. Elke sessie wordt gericht oefenen.</p>
+
+            <h3>Doorgeven en Spelen</h3>
+            <p>Geef de telefoon door aan een vriend. 2-6 spelers verdelen zich in teams op hetzelfde apparaat. Kies je categorieën, kies de spelduur en ontdek welk team de geschiedenis het beste sorteert.</p>
+
+            <h3>Netwerkspel</h3>
+            <p>Verbind meerdere apparaten via wifi voor gelijktijdige competitie. Geen accounts, geen matchmaking -- gewoon oppakken en spelen.</p>
+        </section>
+
+        <section class="press-section" id="mastery">
+            <h2>Twee paden naar meesterschap</h2>
+
+            <h3>Historian-pad -- Diepgaande expertise</h3>
+            <p>Speel een categorie en klim op van Student via Scholar, Professor, Expert, Authority en Luminary tot de felbegeerde Laureate. Elke categorie volgt je voortgang apart. Elke rang vereist meer gespeelde rondes, hogere nauwkeurigheid en consistent spelen.</p>
+
+            <h3>Scholar-pad -- Brede kennis</h3>
+            <p>Je wereldwijde rang over de hele geschiedenis. Speel breed en klim van Apprentice via Chronicler, Archivist, Curator, Sage en Oracle naar Grandmaster -- de hoogste rang, waarvoor je meesterschap in 90% van alle beschikbare categorieën nodig hebt.</p>
+
+            <p>Het Meesterschap-dashboard laat precies zien wat je nodig hebt voor je volgende rang: hoeveel extra rondes, welk nauwkeurigheidsdoel en welke categorieën je moet verkennen.</p>
+        </section>
+
+        <section class="press-section" id="difficulty">
+            <h2>Drie moeilijkheidsniveaus</h2>
+            <table class="difficulty-table">
+                <thead>
+                    <tr><th>Niveau</th><th>Stijl</th><th>Voor wie</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Vriendelijk</td><td>Geen strafpunten, leer op je eigen tempo</td><td>Nieuwe spelers, gezinnen, senioren, klaslokalen</td></tr>
+                    <tr><td>Competitief</td><td>Gematigd risico en beloning</td><td>Regelmatige spelers die een uitdaging zoeken</td></tr>
+                    <tr><td>Expert</td><td>Hoge inzet, flinke strafpunten</td><td>Geschiedenisliefhebbers die het willen bewijzen</td></tr>
+                </tbody>
+            </table>
+            <p>Er is geen timer. Kennis boven snelheid, altijd.</p>
+        </section>
+
+        <section class="press-section" id="different">
+            <h2>Wat het anders maakt</h2>
+            <p><strong>Geen meerkeuze.</strong> Elk triviaspel geeft je A, B, C of D. Sorting History vraagt je om je vast te leggen -- plaats de gebeurtenis op de tijdlijn en ontdek of je je geschiedenis echt kent.</p>
+            <p><strong>Echte diepgang.</strong> Meer dan 1.200 gebeurtenissen bij lancering in 12 categorieën, met twee nieuwe categorieën elke maand. Dit zijn geen 55 kaartjes die je in een weekend uit je hoofd leert.</p>
+            <p><strong>Twee paden naar meesterschap.</strong> Het Historian-pad beloont diepgaande kennis in afzonderlijke categorieën. Het Scholar-pad beloont brede kennis over de hele geschiedenis. Geen enkele andere geschiedenistrivia-app biedt zoiets.</p>
+            <p><strong>Je leert ook als je het fout hebt.</strong> Na elke ronde zie je de juiste volgorde met data en context. Zet de Leermodus aan voor gespreide herhaling.</p>
+            <p><strong>Offline speelbaar.</strong> In het vliegtuig, in de trein, op de camping -- geen internet nodig.</p>
+            <p><strong>Vanaf het begin geschikt voor het hele gezin.</strong> Ontworpen voor alle leeftijden. Doorgeven en Spelen maakt van één apparaat een spelletjesavond voor 2-6 personen. Geen accounts aanmaken, geen gedoe met instellen.</p>
+        </section>
+
+        <section class="press-section" id="categories">
+            <h2>Categorieën bij lancering</h2>
+            <ul class="category-list">
+                <li>Amerikaanse Geschiedenis <span class="tier-badge tier-free">Gratis</span></li>
+                <li>Wereldoorlogen <span class="tier-badge tier-free">Gratis</span></li>
+                <li>Wetenschappelijke Ontdekkingen <span class="tier-badge tier-free">Gratis</span></li>
+                <li>Muziek &amp; Entertainment <span class="tier-badge tier-free">Gratis</span></li>
+                <li>Sportgeschiedenis <span class="tier-badge tier-free">Gratis</span></li>
+                <li>Oude Beschavingen <span class="tier-badge tier-free">Gratis</span></li>
+                <li>Europese Geschiedenis <span class="tier-badge tier-free">Gratis</span></li>
+                <li>TV-Geschiedenis <span class="tier-badge tier-free">Gratis</span></li>
+                <li>Eten &amp; Drinken <span class="tier-badge tier-premium">Explorer+</span></li>
+                <li>Portugese Geschiedenis <span class="tier-badge tier-premium">Explorer+</span></li>
+                <li>Duitse Geschiedenis <span class="tier-badge tier-premium">Explorer+</span></li>
+                <li>Vrouwengeschiedenis <span class="tier-badge tier-premium">Explorer+</span></li>
+            </ul>
+            <p>Gratis gebruikers kunnen elke premiumcategorie voor een uur ontgrendelen door een advertentie te bekijken. Na de lancering worden maandelijks twee nieuwe categorieën toegevoegd via stemming door de community.</p>
+        </section>
+
+        <section class="press-section" id="tiers">
+            <h2>Abonnementsniveaus</h2>
+            <table class="tier-table">
+                <thead>
+                    <tr><th>Niveau</th><th>Prijs</th><th>Wat je krijgt</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Gratis</td><td>$ 0</td><td>8 categorieën, meer dan 800 gebeurtenissen. Premiumcategorieën ontgrendelen via advertentie. Scholar-pad tot Sage.</td></tr>
+                    <tr><td>Explorer</td><td>$ 1,99/maand of $ 9,99/jaar</td><td>Alle 12 categorieën, advertentievrij. Nieuwe categorieën op de dag van release.</td></tr>
+                    <tr><td>Historian</td><td>$ 2,99/maand of $ 14,99/jaar</td><td>Alles van Explorer + epische categorieën (elk meer dan 500 gebeurtenissen) + History Pinpoint + stemmen over uitbreidingen + streekbescherming.</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="press-section" id="story">
+            <h2>Het verhaal van de ontwikkelaar</h2>
+            <blockquote class="dev-story">
+                "Ik ben televisieproducent, geen game-ontwikkelaar. Het favoriete spel van mijn vrouw is altijd Chronology geweest. We hebben het tien jaar gespeeld. Op een dag zei ze: 'Sommige van deze feiten worden een beetje oud. Ik wou dat er een manier was om een geschiedenissorteerspel te spelen dat nooit oud wordt.' Negen maanden later kan ik -- met de hulp van Claude -- ja zeggen."
+            </blockquote>
+            <p>Ra'uf Glasgow bouwde Sorting History in zijn eentje met behulp van AI-gestuurde ontwikkeling. Als televisieproducent gebruikte hij SwiftUI, StoreKit 2 en Claude om een native iOS-ervaring te creëren met vijf talen, VoiceOver-ondersteuning en offline spelen -- alles als solo-ontwikkelaar.</p>
+        </section>
+
+        <section class="press-section" id="assets">
+            <h2>Media-assets</h2>
+            <div class="assets-note">
+                <p>App-screenshots, gameplayvideo's en het app-icoon zijn beschikbaar op aanvraag. Neem contact op via <a href="mailto:hello@sortinghistory.com">hello@sortinghistory.com</a> voor materiaal in hoge resolutie.</p>
+                <p>Het app-icoon en de merkassets mogen zonder aanpassingen worden gebruikt in redactionele berichtgeving.</p>
+            </div>
+        </section>
+
+        <section class="press-section" id="contact">
+            <h2>Perscontact</h2>
+            <div class="contact-box">
+                <p><strong>Ra'uf Glasgow</strong> / Empty Cup Media</p>
+                <p>E-mail: <a href="mailto:hello@sortinghistory.com">hello@sortinghistory.com</a></p>
+                <p>Website: <a href="https://sortinghistory.com">sortinghistory.com</a></p>
+                <p>X: <a href="https://x.com/SortingHistory">@SortingHistory</a></p>
+                <p>YouTube: <a href="https://youtube.com/@SortingHistory">@SortingHistory</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="/nl/about.html">Over</a>
+                <a href="/how-to-play/">Uitleg</a>
+                <a href="/nl/privacy.html">Privacybeleid</a>
+                <a href="/nl/terms.html">Algemene Voorwaarden</a>
+                <a href="/nl/support.html">Ondersteuning</a>
+                <a href="mailto:hello@sortinghistory.com">Contact</a>
+            </div>
+            <p class="copyright">&copy; 2026 Sorting History. Alle rechten voorbehouden.</p>
+        </div>
+    </footer>
+    <script src="/scripts/nav-toggle.js" defer></script>
+</body>
+</html>

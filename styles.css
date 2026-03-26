@@ -25,6 +25,13 @@ body {
     line-height: 1.6;
 }
 
+/* Comfortaa brand font for logo, headings, and tagline */
+.logo,
+.hero h1,
+.tagline {
+    font-family: 'Comfortaa', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
 /* Navigation */
 header {
     position: fixed;
@@ -51,6 +58,20 @@ nav {
     font-weight: 700;
     color: var(--accent-orange);
     text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.logo-icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
+.logo-icon svg {
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
 }
 
 .nav-links {
@@ -127,14 +148,39 @@ main {
 .hero h1 {
     font-size: 3.5rem;
     font-weight: 700;
-    color: var(--accent-orange);
+    color: var(--text-primary);
     margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
 }
 
 .tagline {
     font-size: 1.25rem;
-    color: var(--text-secondary);
+    color: var(--accent-orange);
     margin-bottom: 1.5rem;
+}
+
+.tagline-place {
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.tagline-divider {
+    display: inline-block;
+    width: 24px;
+    height: 1.5px;
+    vertical-align: middle;
+    margin: 0 6px;
+    background: linear-gradient(90deg, transparent, var(--accent-orange));
+}
+
+.hero-clock {
+    margin-bottom: 1.5rem;
+}
+
+.hero-clock svg {
+    width: 56px;
+    height: 56px;
 }
 
 .coming-soon-badge {

@@ -66,7 +66,7 @@
                 "@type": "HowToStep",
                 "position": 4,
                 "name": "Enter your year guess",
-                "text": "Use the number pad to type your best guess for when the event happened. Use the arrows to adjust by 1, 10, or 100 years."
+                "text": "Swipe left or right to move through years, tap the Earlier or Later buttons, or tap the year display to type a year directly. Use era chips to jump to broad time periods."
             },
             {
                 "@type": "HowToStep",
@@ -97,7 +97,7 @@
                 "name": "Is History Pinpoint free?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "History Pinpoint is available exclusively to Historian subscribers. It is not included in the free tier or the Explorer subscription. The Historian tier includes History Pinpoint along with all categories, expansion packs, and other premium features."
+                    "text": "History Pinpoint is available exclusively to Historian subscribers. It is not included in the free tier or the Explorer subscription. The Historian tier includes History Pinpoint along with all categories, epic categories, and other premium features."
                 }
             },
             {
@@ -112,12 +112,16 @@
     }
     </script>
 
+    <!-- Comfortaa Brand Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
     <header>
         <nav>
-            <a href="/" class="logo">Sorting History</a>
+            <a href="/" class="logo"><span class="logo-icon"><svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="20" stroke="currentColor" stroke-width="3"/><path d="M30 18v12l8 5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M16 14a20 20 0 0128 0" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M16 14l-3-5M16 14l5-1" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></span>Sorting History</a>
             <button class="nav-toggle" aria-label="Menu" aria-expanded="false">&#9776;</button>
             <div class="nav-links">
                 <a href="/about.html">About</a>
@@ -152,7 +156,7 @@
             </figure>
             <ol>
                 <li><strong>See an event.</strong> Each round shows a historical event with its title and a short description.</li>
-                <li><strong>Guess the year.</strong> Use the number pad to enter your best guess. You can fine-tune with arrows that adjust by 1, 10, or 100 years.</li>
+                <li><strong>Guess the year.</strong> Swipe left or right to move through years, use the Earlier and Later buttons to adjust, or tap the year display to type a year directly. Era chips let you jump to broad time periods like Ancient, Medieval, or Modern.</li>
                 <li><strong>Submit your guess.</strong> The game reveals the actual year and shows how close you were.</li>
                 <li><strong>Earn points.</strong> The closer your guess, the more points you earn. Four precision levels determine your score for each round.</li>
             </ol>
@@ -212,7 +216,7 @@
                 <li><strong>Read the description carefully.</strong> Mentions of specific people, technologies, or countries can narrow the era dramatically.</li>
                 <li><strong>Anchor on what you know.</strong> "World War II ended in 1945" &mdash; use landmarks like this to estimate nearby events.</li>
                 <li><strong>Think about the category.</strong> If you're playing Ancient Civilizations, your guess should probably start with a large number. If it's TV History, you're almost certainly post-1940.</li>
-                <li><strong>Use the arrows.</strong> Start with a rough century, then fine-tune. The &plusmn;100 arrow gets you in the ballpark, then &plusmn;10 and &plusmn;1 dial it in.</li>
+                <li><strong>Use the controls that feel natural.</strong> Tap an era chip to jump to the right period, swipe to browse nearby years, or tap the year display to type directly. Long-press the Earlier or Later buttons to accelerate through years quickly.</li>
                 <li><strong>BCE dates work too.</strong> Events from before the Common Era use negative years. The game handles ancient history correctly.</li>
             </ul>
         </section>
@@ -220,7 +224,7 @@
         <section id="availability">
             <h2>Who Can Play History Pinpoint?</h2>
             <p>History Pinpoint is available exclusively to <strong>Historian</strong> subscribers. It's a premium mode that tests a deeper level of historical knowledge &mdash; not just the order of events, but when exactly they happened.</p>
-            <p>The Historian tier also includes all categories, expansion packs, and other premium features.</p>
+            <p>The Historian tier also includes all categories, epic categories, and other premium features.</p>
         </section>
 
         <section id="vs-sorting">
@@ -236,7 +240,7 @@
                 <tbody>
                     <tr>
                         <td><strong>What you do</strong></td>
-                        <td>Drag events into chronological order</td>
+                        <td>Place events in chronological order</td>
                         <td>Guess the exact year</td>
                     </tr>
                     <tr>

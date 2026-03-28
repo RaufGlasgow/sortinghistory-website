@@ -236,6 +236,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css">
+    <script>var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);</script>
 </head>
 <body>
     <header>
@@ -258,6 +259,10 @@
                 <a href="/nl/">NL</a>
                 <a href="/es/" class="lang-active">ES</a>
             </div>
+            <button class="theme-toggle" aria-label="Toggle light/dark mode" title="Toggle theme">
+                <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+            </button>
         </nav>
     </header>
 
@@ -265,13 +270,19 @@
         <section class="hero">
             <div class="hero-content">
                 <div class="hero-clock">
-                    <svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="20" stroke="#e07850" stroke-width="3"/><path d="M30 18v12l8 5" stroke="#e07850" stroke-width="3" stroke-linecap="round"/><path d="M16 14a20 20 0 0128 0" stroke="#e07850" stroke-width="3" stroke-linecap="round"/><path d="M16 14l-3-5M16 14l5-1" stroke="#e07850" stroke-width="2.5" stroke-linecap="round"/></svg>
+                    <svg viewBox="0 0 60 60" fill="none" style="color: var(--accent-orange)"><circle cx="30" cy="30" r="20" stroke="currentColor" stroke-width="3"/><path d="M30 18v12l8 5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M16 14a20 20 0 0128 0" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M16 14l-3-5M16 14l5-1" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
                 </div>
                 <h1>Sorting History</h1>
                 <p class="tagline">Put it in its<span class="tagline-divider"></span><span class="tagline-place">place.</span></p>
 
-                <div class="coming-soon-badge">
-                    <span>Disponible en abril de 2026</span>
+                <div class="countdown-section" id="countdown">
+                    <p class="countdown-label">Lanzamiento el 16 de abril</p>
+                    <div class="countdown-grid">
+                        <div class="countdown-unit"><span class="countdown-number" id="cd-days">--</span><span class="countdown-text">Días</span></div>
+                        <div class="countdown-unit"><span class="countdown-number" id="cd-hours">--</span><span class="countdown-text">Horas</span></div>
+                        <div class="countdown-unit"><span class="countdown-number" id="cd-mins">--</span><span class="countdown-text">Min</span></div>
+                        <div class="countdown-unit"><span class="countdown-number" id="cd-secs">--</span><span class="countdown-text">Seg</span></div>
+                    </div>
                 </div>
 
                 <p class="description">
@@ -573,5 +584,7 @@
         </div>
     </footer>
     <script src="/scripts/nav-toggle.js" defer></script>
+    <script src="/scripts/theme-toggle.js" defer></script>
+    <script src="/scripts/countdown.js" defer></script>
 </body>
 </html>

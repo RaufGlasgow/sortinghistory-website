@@ -218,6 +218,7 @@ main {
 .hero-content {
     flex: 1;
     max-width: 500px;
+    text-align: center;
 }
 
 .app-icon img {
@@ -262,6 +263,24 @@ main {
 .hero-clock svg {
     width: 56px;
     height: 56px;
+    animation: clock-glow 4s ease-in-out infinite;
+}
+
+/* Clock hand animation */
+.clock-minute {
+    transform-box: view-box;
+    transform-origin: 30px 30px;
+    animation: clock-sweep 60s linear infinite;
+}
+
+@keyframes clock-sweep {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes clock-glow {
+    0%, 100% { filter: drop-shadow(0 0 0px var(--accent-orange)); }
+    50% { filter: drop-shadow(0 0 10px var(--accent-orange)); }
 }
 
 /* Countdown Clock */

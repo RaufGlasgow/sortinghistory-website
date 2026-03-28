@@ -72,6 +72,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css">
+    <script>var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);</script>
     <style>
         .fact-table {
             width: 100%;
@@ -80,7 +81,7 @@
         }
         .fact-table td {
             padding: 0.6rem 0;
-            border-bottom: 1px solid rgba(255,255,255,0.06);
+            border-bottom: 1px solid var(--border-subtle);
             vertical-align: top;
         }
         .fact-table td:first-child {
@@ -120,12 +121,12 @@
             text-align: left;
             color: var(--accent-orange);
             padding: 0.5rem 1rem 0.5rem 0;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid var(--border-subtle);
             font-size: 0.9rem;
         }
         .tier-table td {
             padding: 0.5rem 1rem 0.5rem 0;
-            border-bottom: 1px solid rgba(255,255,255,0.04);
+            border-bottom: 1px solid var(--border-subtle);
             color: var(--text-secondary);
             font-size: 0.9rem;
         }
@@ -138,12 +139,12 @@
             text-align: left;
             color: var(--accent-orange);
             padding: 0.5rem 1rem 0.5rem 0;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid var(--border-subtle);
             font-size: 0.9rem;
         }
         .difficulty-table td {
             padding: 0.5rem 1rem 0.5rem 0;
-            border-bottom: 1px solid rgba(255,255,255,0.04);
+            border-bottom: 1px solid var(--border-subtle);
             color: var(--text-secondary);
             font-size: 0.9rem;
         }
@@ -151,7 +152,7 @@
             border-left: 3px solid var(--accent-orange);
             padding: 1.2rem 1.5rem;
             margin: 1.5rem 0;
-            background: rgba(224,120,80,0.04);
+            background: var(--bg-card);
             border-radius: 0 8px 8px 0;
             font-style: italic;
             color: var(--text-secondary);
@@ -162,7 +163,7 @@
             border-radius: 12px;
             padding: 2rem;
             margin: 1.5rem 0;
-            border: 1px solid rgba(255,255,255,0.06);
+            border: 1px solid var(--border-subtle);
         }
         .contact-box p {
             margin: 0.4rem 0;
@@ -191,7 +192,7 @@
             border-radius: 4px;
             margin-left: 0.5rem;
         }
-        .tier-free { background: rgba(255,255,255,0.08); color: var(--text-secondary); }
+        .tier-free { background: var(--bg-secondary); color: var(--text-secondary); }
         .tier-premium { background: rgba(74,158,255,0.15); color: var(--accent-blue); }
         .tier-epic { background: rgba(224,120,80,0.15); color: var(--accent-orange); }
         .assets-note {
@@ -199,7 +200,7 @@
             border-radius: 12px;
             padding: 1.5rem;
             margin: 1rem 0;
-            border: 1px solid rgba(255,255,255,0.06);
+            border: 1px solid var(--border-subtle);
             color: var(--text-secondary);
         }
     </style>
@@ -225,6 +226,10 @@
                 <a href="/nl/press.html">NL</a>
                 <a href="/es/press.html" class="lang-active">ES</a>
             </div>
+            <button class="theme-toggle" aria-label="Toggle light/dark mode" title="Toggle theme">
+                <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+            </button>
         </nav>
     </header>
 
@@ -395,5 +400,6 @@
         </div>
     </footer>
     <script src="/scripts/nav-toggle.js" defer></script>
+    <script src="/scripts/theme-toggle.js" defer></script>
 </body>
 </html>

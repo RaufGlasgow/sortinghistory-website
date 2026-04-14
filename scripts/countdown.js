@@ -1,7 +1,8 @@
 (function () {
-    // April 16, 2026 at 10:00 AM Lisbon time (UTC+1 WEST / UTC+0 WET)
+    // May 7, 2026 at 10:00 AM Lisbon time (UTC+1 WEST during DST)
+    // Launch delayed from original April 16 target per 2026-04-14 decision.
     // Using 09:00 UTC which is 10:00 Lisbon during DST
-    var launchDate = new Date('2026-04-16T09:00:00Z');
+    var launchDate = new Date('2026-05-07T09:00:00Z');
 
     var daysEl = document.getElementById('cd-days');
     var hoursEl = document.getElementById('cd-hours');

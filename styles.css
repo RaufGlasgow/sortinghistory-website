@@ -98,12 +98,43 @@ nav {
 }
 
 .logo {
-    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.logo-img {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.logo-title {
+    font-size: 1.1rem;
     font-weight: 700;
     color: var(--logo-text);
-    text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 2px;
+}
+
+.logo-tagline {
+    font-size: 0.6rem;
+    font-weight: 400;
+    color: var(--accent-orange);
+    letter-spacing: 1px;
+}
+
+.logo-tagline-place {
+    font-weight: 700;
+    color: var(--text-primary);
 }
 
 .logo-icon {
@@ -263,6 +294,18 @@ main {
 .hero-clock svg {
     width: 56px;
     height: 56px;
+    animation: clock-spin 20s linear infinite;
+}
+
+@keyframes clock-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-clock svg {
+        animation: none;
+    }
 }
 
 /* Countdown Clock */

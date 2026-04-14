@@ -36,6 +36,14 @@ document.querySelectorAll('.notify-form').forEach(function(form) {
         button.classList.add('notify-btn-success');
         input.value = '';
         showMessage(form, data.message, 'success');
+        if (typeof gtag === 'function') {
+          var emailVal = body.get('email') || '';
+          gtag('event', 'email_signup', {
+            email_domain: emailVal.split('@')[1] || '',
+            page: location.pathname,
+            language: lang
+          });
+        }
       } else {
         button.textContent = originalText;
         button.disabled = false;
